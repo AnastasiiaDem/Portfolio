@@ -263,6 +263,10 @@ p {
           align-items: center;
           justify-content: center;
         }
+
+        .btn:hover {
+          background: #f2f2f2;
+        }
       }
     }
   }
@@ -299,4 +303,33 @@ p {
 
 .social a:hover .tooltip {
   visibility: visible;
+}
+
+.mac {
+  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.mac:hover {
+  transform: scale(1.1);
+}
+
+.screenshots {
+  opacity: 0;
+  background: rgb(255 255 255 / 10%);
+  backdrop-filter: blur(3px);
+  width: 437px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  padding: 20px 0;
+  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+  img {
+    height: 230px;
+    width: 360px;
+  }
+}
+
+.mac:hover .screenshots {
+  opacity: 1;
 }

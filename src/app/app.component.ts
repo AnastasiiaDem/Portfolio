@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import * as $ from 'jquery';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,5 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // @HostListener('document:mousemove', ['$event'])
-  // onMouseMove(e: any) {
-  //     $("#pointer").css({ left: e.pageX - 120, top: e.pageY - 120 });
-  // }
-  
-  x: number = 0;
-  
-  translate(v: number) {
-    this.x = v;
-  }
+
 }

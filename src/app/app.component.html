@@ -4,7 +4,7 @@
     <p class="name">ANASTASIIA DEMENTIEVA</p>
     <nav class="navbar">
       <a href="#" class="floating-indicator w-inline-block"
-         [ngStyle]="{transform : !!x ? 'translateX(' + x + '00%)' : 'translateX(' + 0 + '%)'}"></a>
+         [style.transform]="!!x ? 'translateX(' + x + '00%)' : 'translateX(' + 0 + '%)'"></a>
       <a href="#home" (click)="translate(0)" class="nav-item"
          [style.color]="x == 0 ? '#111827' : 'rgba(17, 24, 39, 0.50)'">Home</a>
       <a href="#about" (click)="translate(1)" class="nav-item"
@@ -15,24 +15,23 @@
          [style.color]="x == 3 ? '#111827' : 'rgba(17, 24, 39, 0.50)'">Contact</a>
     </nav>
     <div class="social">
-      <a target="_blank" href="https://www.instagram.com/anastasiiadementyeva" style="height: 20px">
+      <a target="_blank" href="https://www.instagram.com/anastasiiadementyeva">
         <span class="tooltip" style="right: -24px;">Instagram</span>
         <img src="./assets/images/insta.svg" alt="instagram">
       </a>
-      <a target="_blank" href="https://www.linkedin.com/in/anastasiia-dementieva-842a75203" style="height: 18px">
+      <a target="_blank" href="https://www.linkedin.com/in/anastasiia-dementieva-842a75203">
         <span class="tooltip" style="right: -20px;">LinkedIn</span>
         <img src="./assets/images/linkedin.svg" alt="linkedin">
       </a>
-      <a target="_blank" href="https://github.com/AnastasiiaDem" style="height: 20px">
+      <a target="_blank" href="https://github.com/AnastasiiaDem">
         <span class="tooltip" style="right: -15px;">GitHub</span>
         <img src="./assets/images/github.svg" alt="github">
       </a>
-      <a target="_blank" href="https://mail.google.com/mail/u/0/?source=mailto&to=2222dementieva@gmail.com&fs=1&tf=cm"
-         style="height: 24px">
+      <a target="_blank" href="https://mail.google.com/mail/u/0/?source=mailto&to=2222dementieva@gmail.com&fs=1&tf=cm">
         <span class="tooltip" style="right: -8px;">Email</span>
         <img src="./assets/images/email.svg" alt="email">
       </a>
-      <a target="_blank" href="./assets/Дементьєва%20Анастасія.pdf" style="height: 24px">
+      <a target="_blank" href="./assets/Дементьєва%20Анастасія.pdf">
         <span class="tooltip">CV</span>
         <img src="./assets/images/cv.svg" alt="cv">
       </a>
@@ -70,7 +69,7 @@
       I began my programming journey during high school, where I chose a physical and mathematical course. In
       university, I decided to continue to challenge myself and went to study computer science. There I gained
       experience in various programming languages such as C/C++, Python, Java, JavaScript, HTML, and CSS <img
-        src="./assets/images/Woman%20Technologist%20Medium%20Skin%20Tone.png" alt="monkey">.
+      src="./assets/images/Woman%20Technologist%20Medium%20Skin%20Tone.png" alt="monkey">.
       <br>I applied for an Angular developer position during my second year and was hired as an intern. Despite the
       challenges, I quickly adapted to the new environment, learned fast, and processed a lot of info everyday. My
       efforts were noticed quickly and I grew a lot thanks to the projects I worked on and my colleagues who were always
@@ -81,14 +80,18 @@
       During
       that year, I created the Taskery app as my final university project. Now, with a bachelor's degree, I am eager to
       return to large projects and teamwork, using my skills and knowledge <img
-        src="./assets/images/Grinning%20Face%20With%20Smiling%20Eyes.png" alt="smile">.
+      src="./assets/images/Grinning%20Face%20With%20Smiling%20Eyes.png" alt="smile">.
     </p>
   </div>
   <div id="projects" class="project-list">
     <div class="project">
       <div class="mac">
         <img src="./assets/images/taskery%20mac.png" alt="taskery">
-        <div class="screenshots"><img src="./assets/images/hover2.svg" alt="hover"></div>
+        <div class="screenshot-block">
+          <div class="screenshots"></div>
+          <div class="screenshots screenshots2"></div>
+        </div>
+        <!--        <div class="screenshots"><img src="./assets/images/hover2.svg" alt="hover"></div>-->
       </div>
       <div class="description">
         <p class="title"><img src="./assets/images/taskery%20logo.png" alt="taskery logo" style="height: 18px"> TASKERY
@@ -119,5 +122,26 @@
       </div>
     </div>
   </div>
+  <div id="contact" class="contact">
+    <p class="contact-title">Get in touch</p>
+    <p class="contact-cv">View my <a href="./assets/Дементьєва%20Анастасія.pdf" target="_blank"><u>CV</u></a></p>
+    <div style="position: relative;top: 0;right: 0;">
+      <p class="contact-email"><a
+        href="https://mail.google.com/mail/u/0/?source=mailto&to=2222dementieva@gmail.com&fs=1&tf=cm" target="_blank">2222dementieva@gmail.com</a>
+      </p>
+      <p class="elsewhere">Find me elsewhere:</p>
+      <div class="elsewhere-link">
+        <a href="https://www.linkedin.com/in/anastasiia-dementieva-842a75203" target="_blank">LinkedIn</a>
+        <a href="https://github.com/AnastasiiaDem" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/anastasiiadementyeva" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="contact-image">
+      <img src="./assets/images/color%20radians.svg" alt="color radians" id="pointer" class="color-block">
+      <img src="./assets/images/f96b99d56c1652f1050f9acd924e18d7-sticker.png" alt="contact-emoji" class="contact-emoji">
+    </div>
+  </div>
 </div>
-<footer></footer>
+<footer class="footer">
+  <p>Copyright © 2023 Anastasiia Dementieva. All rights reserved.</p>
+</footer>

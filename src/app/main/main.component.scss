@@ -259,10 +259,10 @@ p {
           font-weight: 500;
           align-items: center;
           justify-content: center;
-        }
 
-        .btn:hover {
-          background: #f2f2f2;
+          &:hover {
+            background: #f2f2f2;
+          }
         }
       }
     }
@@ -364,10 +364,11 @@ p {
 
 .mac {
   transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
+  cursor: pointer;
 
-.mac:hover {
-  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .screenshot-block {

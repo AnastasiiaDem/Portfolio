@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, Renderer2, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {animate} from '@angular/animations';
 
@@ -23,9 +23,6 @@ export class TaskeryComponent {
   }
 
   constructor(private router: Router) {
-  }
-
-  ngOnInit() {
   }
 
   navigateTo(page: string) {

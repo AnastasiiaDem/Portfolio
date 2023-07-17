@@ -85,21 +85,27 @@
   </div>
   <div id="projects" class="project-list">
     <div class="project">
-      <div class="mac" (click)="navigateTo('taskery')">
+      <div class="mac" (click)="navigateTo('taskery')" onclick="">
         <img src="./assets/images/taskery%20mac.png" alt="taskery">
-        <div class="screenshot-block">
-          <div class="screenshots"></div>
-          <div class="screenshots screenshots2"></div>
-        </div>
+        <p class="details" style="color: #000;left: 40%;transform: translate(-40%, -50%);">see in details <img
+          style="filter: none;"
+          height="20px" width="20px" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png" alt="">
+        </p>
+        <!--        <div class="screenshot-block">-->
+        <!--          <div class="screenshots"></div>-->
+        <!--          <div class="screenshots screenshots2"></div>-->
+        <!--        </div>-->
         <!--        <div class="taskery"><img src="./assets/images/hover2.svg" alt="hover"></div>-->
       </div>
       <div class="description">
-        <p class="title"><img src="./assets/images/taskery%20logo.png" alt="taskery logo" style="height: 18px"> TASKERY
+        <p class="title"><img src="./assets/images/taskery%20logo.png" alt="taskery logo"
+                              style="height: 18px;margin-right: 5px;margin-bottom: 2px;"> TASKERY
         </p>
         <p class="desc-text">This project is a web-based application designed to help users manage and control their
           project tasks.
           <br>It provides a user-friendly interface in English and Ukrainian to plan, execute, and monitor tasks and
-          projects. Key features include user authentication, creating and describing projects, tracking project and task statuses, generating reports, and viewing the calendar. The project
+          projects. Key features include user authentication, creating and describing projects, tracking project and
+          task statuses, generating reports, and viewing the calendar. The project
           aims to improve the user experience, simplify workflow organization, improve communication and team
           productivity, and ensure the quality of tasks and deadlines.</p>
         <div class="tech">
@@ -118,6 +124,50 @@
                                          style="height: 12px;position: absolute;top: 5px;right: 5px;" alt=""></div>
           </a>
         </div>
+      </div>
+    </div>
+
+    <div class="project" style="margin: 100px;">
+      <div class="description">
+        <p class="title"><img src="./assets/images/yuliana_logo.svg" alt="yuliana logo"
+                              style="height: 12px;margin-right: 5px;margin-bottom: 2px;"> YULIANA
+          DEMENTYEVA
+        </p>
+        <p class="desc-text">
+          The website serves as a digital platform to showcase the model's work, career achievements, and vibrant
+          personality.
+          <br>
+          The main goal of the project was to create a visually appealing and user-friendly portfolio site. The website
+          had to display her portfolio of photo shoots, runway appearances, brand collaborations and other notable
+          achievements, thereby increasing her global recognition in the fashion and modeling industry and simplifying
+          access to all of her work and social media.
+        </p>
+        <div class="tech">
+          <p>Angular</p>
+          <p>Typescript</p>
+          <p>SCSS</p>
+        </div>
+        <div class="btn-group">
+          <a href="https://github.com/AnastasiiaDem/YulianaDementyeva" target="_blank">
+            <div class="btn">code<img src="./assets/images/github.svg" style="height: 12px;" alt=""></div>
+          </a>
+          <a href="https://yulianadementyeva.vercel.app/" target="_blank">
+            <div class="btn">website<img src="./assets/images/top-arrow.svg"
+                                         style="height: 12px;position: absolute;top: 5px;right: 5px;" alt=""></div>
+          </a>
+        </div>
+      </div>
+      <div class="mac" (click)="navigateTo('yulianadementyeva')" onclick="">
+        <img src="./assets/images/yuliana_mac.png" alt="yulianadementyeva">
+        <p class="details" style="color: #fff;">see in details
+          <img style="filter: none;" height="20px" width="20px"
+               src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/visible.png" alt="">
+        </p>
+        <!--        <div class="screenshot-block">-->
+        <!--          <div class="screenshots"></div>-->
+        <!--          <div class="screenshots screenshots2"></div>-->
+        <!--        </div>-->
+        <!--        <div class="taskery"><img src="./assets/images/hover2.svg" alt="hover"></div>-->
       </div>
     </div>
   </div>

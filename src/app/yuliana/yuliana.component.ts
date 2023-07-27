@@ -11,9 +11,10 @@ export class YulianaComponent {
 
   // @ViewChild('card', { static: true }) cardRef!: ElementRef;
   // @ViewChild('glow', { static: true }) glowRef!: ElementRef;
-  bounds: DOMRect | null = null;
+  // bounds: DOMRect | null = null;
 
   degrees = 0;
+  darkMode = false;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
@@ -37,6 +38,12 @@ export class YulianaComponent {
 
   scrollToTop() {
     window.scrollTo(0, 0);
+  }
+
+  setTheme() {
+    this.darkMode = !this.darkMode;
+    document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
+    document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
   }
 
   // rotateToMouse(e: MouseEvent) {

@@ -1,139 +1,24 @@
-.header-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  //background: rgb(255 255 255);
-  //backdrop-filter: blur(5px);
-  position: fixed;
-  width: 100%;
-  height: 96px;
-  z-index: 2;
-  padding: 0 88px;
-}
-
-.navbar {
-  display: flex;
-  padding: 0 15px;
-  flex-direction: row;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, .1);
-  border-radius: 56px;
-  background-color: #fff;
-  box-shadow: 0 10px 10px -5px rgb(0 0 0 / 10%);
-  width: max-content;
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-
-  &:hover {
-    background-color: #f2f2f2;
-  }
-
-  p {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    line-height: 40px;
-  }
-}
-
-.photo-stack {
-  //position: absolute;
-  //top: 250px;
-  width: calc(100vw - 30%);
-  border-radius: 20px;
-  box-shadow: 5px 5px 30px 0 rgba(17, 24, 39, 0.10), -5px -5px 50px 0px rgba(17, 24, 39, 0.10);
-  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  object-fit: cover;
-}
-
-.photo1 {
-  transform: rotate(-10deg);
-}
-
 .photo2 {
   padding-bottom: 15px;
 }
 
-.photo3 {
-  transform: rotate(10deg);
+@media (max-width: 480px) {
+
 }
 
-.photo1:hover {
-  transform: rotate(-10deg) scale(1.2);
+@media (min-width: 481px) and (max-width: 768px) {
+
 }
 
-.photo2:hover {
-  //transform: scale(1.2);
+@media (min-width: 769px) and (max-width: 1024px) {
+
 }
 
-.photo3:hover {
-  transform: scale(1.2) rotate(10deg);
-}
+@media (min-width: 1440px) {
 
-.photo5, .photo4 {
-  width: 700px;
-}
-
-.photo6 {
-  height: 215px;
-  left: 15px;
-}
-
-.photo7 {
-  height: 250px;
-  right: 15px;
-}
-
-.photo6, .photo7 {
-  position: absolute;
-  top: -250px;
-}
-
-.photo8 {
-  width: 600px;
-}
-
-.photo9 {
-  width: 650px;
-}
-
-.photo10 {
-  width: 800px;
-}
-
-.photo11 {
-  width: 800px;
-}
-
-.photo12, .photo13 {
-  width: 700px;
-}
-
-.photo13 {
-  margin: 30px auto -30px -310px;
-}
-
-.text-block {
-  text-align: center;
-  padding: 20px 25px;
-  border-radius: 12px;
-  background-color: #f6f6f6;
-  width: 600px;
-  margin: 0 auto;
-  font-size: 14px;
-
-  p {
-    color: #707070;
-
-    span {
-      color: #707070;
-      font-weight: bold;
-    }
-  }
 }
 
 
-//
 //.card {
 //  font-weight: bold;
 //  padding: 1em;
@@ -170,20 +55,3 @@
 //
 //  background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
 //}
-
-
-@media (max-width: 480px) {
-
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1440px) {
-
-}

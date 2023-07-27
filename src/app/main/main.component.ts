@@ -4,13 +4,16 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss', '../app.component.scss']
 })
 export class MainComponent {
   // @HostListener('document:mousemove', ['$event'])
   // onMouseMove(e: any) {
   //     $("#pointer").css({ left: e.pageX - 120, top: e.pageY - 120 });
   // }
+
+  x: number = 0;
+  darkMode = false;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -30,9 +33,6 @@ export class MainComponent {
 
     this.reveal();
   }
-
-  x: number = 0;
-  darkMode = false;
 
   constructor(private router: Router) {
   }

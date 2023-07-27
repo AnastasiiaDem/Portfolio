@@ -10,6 +10,7 @@ import {animate} from '@angular/animations';
 export class TaskeryComponent {
 
   degrees = 0;
+  darkMode = false;
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event) {
@@ -33,5 +34,11 @@ export class TaskeryComponent {
 
   scrollToTop() {
     window.scrollTo(0, 0);
+  }
+
+  setTheme() {
+    this.darkMode = !this.darkMode;
+    document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
+    document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
   }
 }

@@ -1,6 +1,4 @@
-import { Component, HostListener } from '@angular/core';
-import * as $ from 'jquery';
-import {Router} from '@angular/router';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',

@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -20,13 +20,15 @@ export class MainComponent {
 
     if (window.pageYOffset < home - 400) {
       this.x = 0;
-    } else if (window.pageYOffset > home - 50 && window.pageYOffset < home + about - 500) {
+    } else if (window.pageYOffset > home - 150 && window.pageYOffset < home + about - 500) {
       this.x = 1;
-    } else if (window.pageYOffset > projects + 500 && window.pageYOffset < home + about + projects - 500) {
+    } else if (window.pageYOffset > home + about - 150 && window.pageYOffset < home + about + projects - 500) {
       this.x = 2;
-    } else if (window.pageYOffset > home + about + projects - 50) {
+    } else if (window.pageYOffset > home + about + projects - 150) {
       this.x = 3;
     }
+
+    this.reveal();
   }
 
   x: number = 0;
@@ -48,5 +50,21 @@ export class MainComponent {
     this.darkMode = !this.darkMode;
     document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
     document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
+  }
+
+  reveal() {
+    var reveals = document.querySelectorAll('.reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('active');
+      } else {
+        reveals[i].classList.remove('active');
+      }
+    }
   }
 }

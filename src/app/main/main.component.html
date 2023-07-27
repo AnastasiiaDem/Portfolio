@@ -75,20 +75,22 @@
       <p class="sub-hi">Angular Front-End Developer</p>
     </div>
     <div class="right-container">
-      <img *ngIf="!darkMode" src="./assets/images/memoji_modified.gif" alt="emoji" class="emoji">
-      <video *ngIf="darkMode" autoplay muted loop playsinline playsInLine class="emoji dark-emoji">
-        <source src="./assets/images/Untitled%20video%20-%20Made%20with%20Clipchamp%20(9).mp4" type="video/mp4">
+      <video *ngIf="!darkMode" autoplay muted loop playsinline playsInLine class="emoji">
+        <source src="./assets/images/memoji_modified.mp4" type="video/mp4">
       </video>
-    <div class="location-block">
-      <p class="based">
-        <img src="./assets/images/Round%20Pushpin.svg" alt="pushpin">
-        based in <span>&nbsp;Charlotte, NC</span>
-      </p>
-      <p class="originally">
-        originally from <span>&nbsp;Kyiv, Ukraine&nbsp;</span>
-        <img src="./assets/images/Flag%20Ukraine.svg" alt="flag ukraine">
-      </p>
-    </div>
+      <video *ngIf="darkMode" autoplay muted loop playsinline playsInLine class="emoji dark-emoji">
+        <source src="./assets/images/dark_memoji_modified.mp4" type="video/mp4">
+      </video>
+      <div class="location-block">
+        <p class="based">
+          <img src="./assets/images/Round%20Pushpin.svg" alt="pushpin">
+          based in <span>&nbsp;Charlotte, NC</span>
+        </p>
+        <p class="originally">
+          originally from <span>&nbsp;Kyiv, Ukraine&nbsp;</span>
+          <img src="./assets/images/Flag%20Ukraine.svg" alt="flag ukraine">
+        </p>
+      </div>
     </div>
   </div>
   <div id="about" class="about p-5">

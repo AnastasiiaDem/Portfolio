@@ -1,49 +1,49 @@
 <header>
   <span id="home"></span>
-  <div class="header-block">
+  <div class="header-block p-5">
     <p class="name">ANASTASIIA DEMENTIEVA</p>
     <nav class="navbar">
       <a href="#" class="floating-indicator w-inline-block"
          [style.transform]="!!x ? 'translateX(' + x + '00%)' : 'translateX(' + 0 + '%)'"></a>
       <a href="#home" (click)="translate(0)" class="nav-item"
-         [style.color]="x == 0 ? '#111827' : 'rgba(17, 24, 39, 0.50)'">Home</a>
+         [style.color]="x == 0 ? 'var(--text-color)' : 'var(--text-pale-color)'">Home</a>
       <a href="#about" (click)="translate(1)" class="nav-item"
-         [style.color]="x == 1 ? '#111827' : 'rgba(17, 24, 39, 0.50)'">About</a>
+         [style.color]="x == 1 ? 'var(--text-color)' : 'var(--text-pale-color)'">About</a>
       <a href="#projects" (click)="translate(2)" class="nav-item"
-         [style.color]="x == 2 ? '#111827' : 'rgba(17, 24, 39, 0.50)'">Projects</a>
+         [style.color]="x == 2 ? 'var(--text-color)' : 'var(--text-pale-color)'">Projects</a>
       <a href="#contact" (click)="translate(3)" class="nav-item"
-         [style.color]="x == 3 ? '#111827' : 'rgba(17, 24, 39, 0.50)'">Contact</a>
+         [style.color]="x == 3 ? 'var(--text-color)' : 'var(--text-pale-color)'">Contact</a>
     </nav>
     <div class="social">
+      <a target="_blank" href="./assets/CV_Anastasiia_Dementieva.pdf">
+        <span class="tooltip" style="left: -3px;">CV</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paperclip"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+      </a>
       <a target="_blank" href="https://www.instagram.com/anastasiiadementyeva">
-        <span class="tooltip" style="right: -24px;">Instagram</span>
-        <img src="./assets/images/insta.svg" alt="instagram">
+        <span class="tooltip" style="right: -23px;">Instagram</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
       </a>
       <a target="_blank" href="https://www.linkedin.com/in/anastasiia-dementieva-842a75203">
         <span class="tooltip" style="right: -20px;">LinkedIn</span>
-        <img src="./assets/images/linkedin.svg" alt="linkedin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
       <a target="_blank" href="https://github.com/AnastasiiaDem">
         <span class="tooltip" style="right: -15px;">GitHub</span>
-        <img src="./assets/images/github.svg" alt="github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
       </a>
       <a target="_blank" href="https://mail.google.com/mail/u/0/?source=mailto&to=2222dementieva@gmail.com&fs=1&tf=cm">
         <span class="tooltip" style="right: -8px;">Email</span>
-        <img src="./assets/images/email.svg" alt="email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
       </a>
-      <a target="_blank" href="./assets/Дементьєва%20Анастасія.pdf">
-        <span class="tooltip">CV</span>
-        <img src="./assets/images/cv.svg" alt="cv">
-      </a>
+      <label class="switch ml-4">
+        <input type="checkbox" (click)="setTheme()" [checked]="true">
+        <span class="slider"></span>
+      </label>
     </div>
   </div>
 </header>
 <div class="main-block">
   <div class="home">
-    <!--    <img src="./assets/images/arrow.svg" alt="arrow" class="arrow">-->
-    <!--    <img src="./assets/images/arrow%20Color.svg" alt="arrow" class="arrow" style="z-index: -1;filter: blur(3px);">-->
-    <!--    <div class="look"><p>look at my projects</p></div>-->
-    <!--    <div class="look look2"></div>-->
     <p class="hi">Hi, I’m Anastasiia</p>
     <p class="sub-hi">Angular Front-End Developer</p>
     <p class="based">
@@ -54,126 +54,72 @@
       originally from <span style="font-size: 14px;">&nbsp;Kyiv, Ukraine&nbsp;</span>
       <img src="./assets/images/Flag%20Ukraine.svg" alt="flag ukraine" style="height: 12px">
     </p>
-    <!--    <img src="./assets/images/color%20radians.svg" alt="color radians" id="pointer" class="color-block">-->
-    <img src="./assets/images/memoji_modified.gif" alt="emoji" class="emoji">
+    <img *ngIf="!darkMode" src="./assets/images/memoji_modified.gif" alt="emoji" class="emoji">
+    <video *ngIf="darkMode" autoplay muted loop playsinline playsInLine class="skeleton emoji dark-emoji">
+      <source src="./assets/images/Untitled%20video%20-%20Made%20with%20Clipchamp%20(9).mp4" type="video/mp4">
+    </video>
   </div>
-  <div id="about" class="about">
-    <p class="text1">
-      Welcome to my portfolio! I am a passionate creator with a Bachelor's degree in Computer Science. I develop
-      dynamic and user-friendly web applications and pay special attention to creating visually appealing websites. With
-      a <u>meticulous eye for details</u>, I focus on every pixel to create a visually appealing app that delivers an
-      exceptional web experience.
-      <br><b>Take a look at my projects!</b>
+  <div id="about" class="about p-5">
+    <div class="d-flex about-line pt-5">
+      <ng-container *ngFor="let _ of [].constructor(30);">
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+      </ng-container>
+    </div>
+    <div class="d-flex about-line">
+      <ng-container *ngFor="let _ of [].constructor(30)">
+        <p class="about-heading">Bachelor's degree in Computer Science</p>
+      </ng-container>
+    </div>
+    <p class="text-center pt-4 about-text">
+      I develop dynamic and user-friendly web applications and pay special attention to creating visually appealing
+      websites.
+      With a <span class="yellow-stroke">meticulous eye</span> for detail, I focus on every
+      pixel to create a <span class="yellow-stroke">eye-catching app</span>
+      that delivers an exceptional web experience.
     </p>
-    <p class="text2">
-      I began my programming journey during high school, where I chose a physical and mathematical course. In
-      university, I decided to continue to challenge myself and went to study computer science. There I gained
-      experience in various programming languages such as C/C++, Python, Java, JavaScript, HTML, and CSS <img
-      src="./assets/images/Woman%20Technologist%20Medium%20Skin%20Tone.png" alt="monkey">.
-      <br>I applied for an Angular developer position during my second year and was hired as an intern. Despite the
-      challenges, I quickly adapted to the new environment, learned fast, and processed a lot of info everyday. My
-      efforts were noticed quickly and I grew a lot thanks to the projects I worked on and my colleagues who were always
-      helpful <img src="./assets/images/Folded%20Hands%20Medium%20Light%20Skin%20Tone.png" alt="hands">. Within a few
-      months, I fully controlled a multi-functional project, scaled up the functionality of the
-      platform and optimized it.
-      <br>However, balancing work and education became difficult in my fourth year, leading me to leave the company.
-      During
-      that year, I created the Taskery app as my final university project. Now, with a bachelor's degree, I am eager to
-      return to large projects and teamwork, using my skills and knowledge <img
-      src="./assets/images/Grinning%20Face%20With%20Smiling%20Eyes.png" alt="smile">.
+    <p class="text-center about-text" style="font-size: 14px;font-weight: 400;padding: 5rem 0 0 0;">
+      During my university journey, I gained some experience in various programming languages such as C/C++, Python,
+      Java, JavaScript, also HTML and CSS. From my second year I worked as an intern. Despite the challenges, I quickly
+      adapted to the new environment, learned fast, and processed a lot of new info everyday. My efforts were noticed
+      quickly and I grew a lot thanks to the projects I worked on and my colleagues who were always helpful. Within a
+      few months, I fully controlled a complex project, scaled up the functionality of the platform and optimized it.
+      However, balancing work and education became difficult in my fourth year, leading me to leave the company. During
+      that period, I created the Taskery app as my final university project. Now, with my bachelor's degree, I am eager
+      to
+      get back to large projects and teamwork, using my skills and knowledge.
     </p>
   </div>
-  <div id="projects" class="project-list">
+  <div id="projects" class="project-list p-5">
     <div class="project">
-      <div class="mac" (click)="navigateTo('taskery')" onclick="">
-        <img src="./assets/images/taskery%20mac.png" alt="taskery">
-        <p class="details" style="color: #000;left: 40%;transform: translate(-40%, -50%);">see in details <img
-          style="filter: none;"
-          height="20px" width="20px" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png" alt="">
-        </p>
-        <!--        <div class="screenshot-block">-->
-        <!--          <div class="screenshots"></div>-->
-        <!--          <div class="screenshots screenshots2"></div>-->
-        <!--        </div>-->
-        <!--        <div class="taskery"><img src="./assets/images/hover2.svg" alt="hover"></div>-->
+      <div class="pb-5">
+        <div class="project-block">
+          <div class="mac" (click)="navigateTo('taskery')" onclick="">
+            <img src="./assets/images/taskery_ipad.svg" alt="taskery">
+            <p class="details" style="color: #000;">view more
+              <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png" alt="">
+            </p>
+          </div>
+        </div>
+        <p class="desc-title pt-3 px-3">Taskery</p>
+        <p class="desc-undertext px-3">task management platform</p>
       </div>
-      <div class="description">
-        <p class="title"><img src="./assets/images/taskery%20logo.png" alt="taskery logo"
-                              style="height: 18px;margin-right: 5px;margin-bottom: 2px;"> TASKERY
-        </p>
-        <p class="desc-text">This project is a web-based application designed to help users manage and control their
-          project tasks.
-          <br>It provides a user-friendly interface in English and Ukrainian to plan, execute, and monitor tasks and
-          projects. Key features include user authentication, creating and describing projects, tracking project and
-          task statuses, generating reports, and viewing the calendar. The project
-          aims to improve the user experience, simplify workflow organization, improve communication and team
-          productivity, and ensure the quality of tasks and deadlines.</p>
-        <div class="tech">
-          <p>Angular</p>
-          <p>Typescript</p>
-          <p>SCSS</p>
-          <p>Node.js</p>
-          <p>MongoDB</p>
+      <div class="pb-5">
+        <div class="project-block">
+          <div class="mac" (click)="navigateTo('yulianadementyeva')" onclick="">
+            <img src="./assets/images/yuliana_ipad.svg" alt="yulianadementyeva">
+            <p class="details" style="color: #fff;">view more
+              <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/visible.png" alt="">
+            </p>
+          </div>
         </div>
-        <div class="btn-group">
-          <a href="https://github.com/AnastasiiaDem/Taskery2" target="_blank">
-            <div class="btn">code<img src="./assets/images/github.svg" style="height: 12px;" alt=""></div>
-          </a>
-          <a href="https://taskery2.vercel.app/" target="_blank">
-            <div class="btn">website<img src="./assets/images/top-arrow.svg"
-                                         style="height: 12px;position: absolute;top: 5px;right: 5px;" alt=""></div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project" style="margin: 100px;">
-      <div class="description">
-        <p class="title"><img src="./assets/images/yuliana_logo.svg" alt="yuliana logo"
-                              style="height: 12px;margin-right: 5px;margin-bottom: 2px;"> YULIANA
-          DEMENTYEVA
-        </p>
-        <p class="desc-text">
-          The website serves as a digital platform to showcase the model's work, career achievements, and vibrant
-          personality.
-          <br>
-          The main goal of the project was to create a visually appealing and user-friendly portfolio site. The website
-          had to display her portfolio of photo shoots, runway appearances, brand collaborations and other notable
-          achievements, thereby increasing her global recognition in the fashion and modeling industry and simplifying
-          access to all of her work and social media.
-        </p>
-        <div class="tech">
-          <p>Angular</p>
-          <p>Typescript</p>
-          <p>SCSS</p>
-        </div>
-        <div class="btn-group">
-          <a href="https://github.com/AnastasiiaDem/YulianaDementyeva" target="_blank">
-            <div class="btn">code<img src="./assets/images/github.svg" style="height: 12px;" alt=""></div>
-          </a>
-          <a href="https://yulianadementyeva.vercel.app/" target="_blank">
-            <div class="btn">website<img src="./assets/images/top-arrow.svg"
-                                         style="height: 12px;position: absolute;top: 5px;right: 5px;" alt=""></div>
-          </a>
-        </div>
-      </div>
-      <div class="mac" (click)="navigateTo('yulianadementyeva')" onclick="">
-        <img src="./assets/images/yuliana_mac.png" alt="yulianadementyeva">
-        <p class="details" style="color: #fff;">see in details
-          <img style="filter: none;" height="20px" width="20px"
-               src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/visible.png" alt="">
-        </p>
-        <!--        <div class="screenshot-block">-->
-        <!--          <div class="screenshots"></div>-->
-        <!--          <div class="screenshots screenshots2"></div>-->
-        <!--        </div>-->
-        <!--        <div class="taskery"><img src="./assets/images/hover2.svg" alt="hover"></div>-->
+        <p class="desc-title pt-3 px-3">Yuliana Dementieva</p>
+        <p class="desc-undertext px-3">portfolio for Ukrainian top model</p>
       </div>
     </div>
   </div>
-  <div id="contact" class="contact">
-    <p class="contact-title">Get in touch</p>
-    <p class="contact-cv">View my <a href="./assets/Дементьєва%20Анастасія.pdf" target="_blank"><u>CV</u></a></p>
+  <div id="contact" class="contact p-5">
+    <p class="contact-title mt-2">Get in touch</p>
+    <p class="contact-cv">View my <a href="./assets/CV_Anastasiia_Dementieva.pdf" target="_blank"><u>CV</u></a></p>
     <div style="position: relative;top: 0;right: 0;">
       <p class="contact-email"><a
         href="https://mail.google.com/mail/u/0/?source=mailto&to=2222dementieva@gmail.com&fs=1&tf=cm" target="_blank">2222dementieva@gmail.com</a>

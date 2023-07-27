@@ -36,45 +36,6 @@
   }
 }
 
-.top-scroll {
-  display: flex;
-  padding: 12px 12px;
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 10px 10px -5px rgb(0 0 0 / 10%);
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  transform: rotate(90deg);
-  width: 40px;
-  height: 40px;
-  align-items: center;
-  justify-content: center;
-
-  &:hover {
-    background-color: #f2f2f2;
-  }
-}
-
-.bg {
-  background: conic-gradient(rgb(136 136 255) 0deg, rgb(204 204 204 / 20%) 0deg);
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  width: 44px;
-  height: 44px;
-  left: -2px;
-  bottom: -2px;
-}
-
-.project-title {
-  //position: absolute;
-  padding-top: 120px;
-  padding-left: 150px;
-  color: #111827;
-  font-size: 55px;
-  font-weight: 900;
-}
-
 .photo-stack {
   //position: absolute;
   //top: 250px;
@@ -93,16 +54,108 @@
   transform: rotate(10deg);
 }
 
-.photo1:hover {
-  transform: rotate(-10deg) scale(1.2);
+.note {
+  position: absolute;
+  z-index: 3;
+  width: 1px;
+  filter: blur(0.3px);
+  height: 70px;
+  background: rgb(17 24 39 / 20%);
+  border-radius: 3px;
+  transform-origin: 0 100%;
+  transition: all 0.5s;
+  visibility: hidden;
+  transform: scaleY(0);
 }
 
-.photo2:hover {
-  transform: scale(1.2);
+.note1 {
+  left: 25%;
+  top: -25%;
 }
 
-.photo3:hover {
-  transform: scale(1.2) rotate(10deg);
+.note2 {
+  left: 50%;
+  top: -15%;
+  height: 25px;
+}
+
+.note3 {
+  right: 25%;
+  top: -25%;
+}
+
+.note-text {
+  width: max-content;
+  position: absolute;
+  font-size: 12px;
+  transition: all 0.5s;
+  opacity: 0;
+  color: rgb(17 24 39 / 30%);
+  font-weight: 500;
+}
+
+.text1 {
+  top: -24%;
+  left: 5%;
+}
+
+.text2 {
+  top: -20%;
+  left: 50%;
+}
+
+.text3 {
+  top: -24%;
+  right: 5%;
+}
+
+.photo-block1, .photo-block2, .photo-block3 {
+  position: relative;
+}
+
+.photo-block1:hover {
+  .note-text {
+  opacity: 1;
+  }
+
+  .note1 {
+    visibility: visible;
+    transform: scaleY(1) scaleX(1.01) rotate(-45deg);
+  }
+
+  .photo1 {
+    transform: rotate(-10deg) scale(1.2);
+  }
+}
+
+.photo-block2:hover {
+  .note-text {
+    opacity: 1;
+  }
+
+  .note2 {
+    visibility: visible;
+    transform: scaleY(1) scaleX(1.01);
+  }
+
+  .photo2 {
+    transform: scale(1.2);
+  }
+}
+
+.photo-block3:hover {
+  .note-text {
+    opacity: 1;
+  }
+
+  .note3 {
+    visibility: visible;
+    transform: scaleY(1) scaleX(1.01) rotate(45deg);
+  }
+
+  .photo3 {
+    transform: scale(1.2) rotate(10deg);
+  }
 }
 
 .photo5, .photo4 {
@@ -167,12 +220,19 @@
   }
 }
 
-.outro, .intro {
-  font-weight: 300;
-  font-size: 1rem;
-  margin: 1rem 11rem 0 10rem;
+
+@media (max-width: 480px) {
+
 }
 
-.outro {
-  text-align: center;
+@media (min-width: 481px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1440px) {
+
 }

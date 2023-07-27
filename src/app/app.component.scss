@@ -1,11 +1,98 @@
 .footer {
   text-align: center;
   padding: 10px;
-  background: rgb(242 242 242 / 50%);
+  background: var(--footer-color);
   font-size: 12px;
 
   p {
-    color: rgb(17 24 39 / 50%);
+    color: var(--text-color);
+    opacity: 0.5;
     margin: 0;
   }
+}
+
+.project-title {
+  color: var(--text-color);
+  font-size: 55px;
+  font-weight: 900;
+}
+
+.tech {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 2rem;
+  margin-bottom: 5.5rem;
+
+  p {
+    color: var(--text-color);
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    background: rgb(156 163 175 / 15%);
+    padding: 3px 9px;
+    border-radius: 10px;
+  }
+}
+
+.btn-group {
+  .btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    background: rgba(217, 217, 217, 0);
+    color: var(--text-color);
+    font-size: 12px;
+    display: flex;
+    gap: 4px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
+}
+
+.outro, .intro {
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 1rem 10rem 2rem 10rem;
+  text-align: justify;
+}
+
+.outro {
+  text-align: center;
+}
+
+.top-scroll {
+  display: flex;
+  padding: 12px 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 10px 10px -5px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transform: rotate(90deg);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #f2f2f2;
+  }
+}
+
+.bg {
+  background: conic-gradient(rgb(136 136 255) 0deg, rgb(204 204 204 / 20%) 0deg);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  width: 44px;
+  height: 44px;
+  left: -2px;
+  bottom: -2px;
 }

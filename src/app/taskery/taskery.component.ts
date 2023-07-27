@@ -5,7 +5,7 @@ import {animate} from '@angular/animations';
 @Component({
   selector: 'taskery',
   templateUrl: './taskery.component.html',
-  styleUrls: ['./taskery.component.scss']
+  styleUrls: ['./taskery.component.scss', '../app.component.scss']
 })
 export class TaskeryComponent {
 

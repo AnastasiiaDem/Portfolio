@@ -1,4 +1,4 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -20,21 +20,20 @@ export class MainComponent {
 
     if (window.pageYOffset < home - 400) {
       this.x = 0;
-    } else if (window.pageYOffset > home - 100 && window.pageYOffset < home + about - 500) {
+    } else if (window.pageYOffset > home - 50 && window.pageYOffset < home + about - 500) {
       this.x = 1;
-    } else if (window.pageYOffset > projects + 550 && window.pageYOffset < home + about + projects - 550) {
+    } else if (window.pageYOffset > projects + 500 && window.pageYOffset < home + about + projects - 500) {
       this.x = 2;
-    } else if (window.pageYOffset > home + about + projects - 60) {
+    } else if (window.pageYOffset > home + about + projects - 50) {
       this.x = 3;
     }
   }
 
   x: number = 0;
-
+  darkMode = false;
 
   constructor(private router: Router) {
   }
-
 
   translate(v: number) {
     this.x = v;
@@ -43,5 +42,11 @@ export class MainComponent {
   navigateTo(page: string) {
     this.router.navigate(['/' + page]);
     window.scrollTo(0, 0);
+  }
+
+  setTheme() {
+    this.darkMode = !this.darkMode;
+    document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
+    document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
   }
 }

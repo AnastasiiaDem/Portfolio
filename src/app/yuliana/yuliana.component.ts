@@ -5,7 +5,7 @@ import {animate} from '@angular/animations';
 @Component({
   selector: 'yuliana',
   templateUrl: './yuliana.component.html',
-  styleUrls: ['./yuliana.component.scss']
+  styleUrls: ['./yuliana.component.scss', '../app.component.scss']
 })
 export class YulianaComponent {
 

@@ -250,10 +250,6 @@ input:checked + .slider:before {
   height: 40px;
   align-items: center;
   justify-content: center;
-
-  &:hover {
-    background-color: var(--hover-color);
-  }
 }
 
 .bg {

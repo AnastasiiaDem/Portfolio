@@ -245,7 +245,6 @@ p {
       opacity: 1;
     }
 
-
     .sliding-block {
      height: 40px;
       width: 3000px;
@@ -267,6 +266,10 @@ p {
       .about-heading {
         height: 45px;
         width: 570px;
+      }
+
+      .about-heading2 {
+        width: 680px !important;
       }
     }
 
@@ -558,14 +561,6 @@ p {
   .floating-indicator, .nav-item {
     width: 80px !important;
     height: 40px !important;
-  }
-  .about-heading {
-    height: 31px !important;
-    font-size: 20px !important;
-    width: 380px !important;
-  }
-  .about-heading2 {
-    width: 460px !important;
   }
   .about-text {
     font-size: 14px !important;

@@ -15,20 +15,6 @@ export class MainComponent {
   x: number = 0;
   darkMode = false;
   time: number;
-  counter: { min: number, sec: number };
-
-  startTimer() {
-    this.counter = { min: 2, sec: 20 };
-    let intervalId = setInterval(() => {
-      if (this.counter.sec - 1 == -1) {
-        this.counter.min -= 1;
-        this.counter.sec = 59
-      }
-      else this.counter.sec -= 1
-      if (this.counter.min === 0 && this.counter.sec == 0) clearInterval(intervalId)
-    }, 1000)
-  }
-
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -50,12 +36,14 @@ export class MainComponent {
   }
 
   constructor(private router: Router) {
-    this.startTimer();
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
   translate(v: number) {
     this.x = v;
+    if (v === 0) {
+      window.scrollTo(0, 0);
+    }
   }
 
   navigateTo(page: string) {

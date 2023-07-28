@@ -2,6 +2,10 @@
   padding-bottom: 15px;
 }
 
+.photo-stack {
+  width: calc(100vw - 20%) !important;
+}
+
 @media (max-width: 480px) {
 
 }

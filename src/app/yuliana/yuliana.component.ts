@@ -1,6 +1,6 @@
-import {Component, ElementRef, HostListener, OnDestroy, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, HostListener, Renderer2} from '@angular/core';
 import {Router} from '@angular/router';
-import {animate} from '@angular/animations';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'yuliana',
@@ -28,7 +28,9 @@ export class YulianaComponent {
   }
 
   constructor(private router: Router,
-              private renderer: Renderer2) {
+              private renderer: Renderer2,
+              private location: Location) {
+    this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
   navigateTo(page: string) {
@@ -44,6 +46,10 @@ export class YulianaComponent {
     this.darkMode = !this.darkMode;
     document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
     document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
+  }
+
+  back() {
+    this.location.back();
   }
 
   // rotateToMouse(e: MouseEvent) {

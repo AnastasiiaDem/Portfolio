@@ -21,8 +21,8 @@
 }
 
 .note1 {
-  left: 25%;
-  top: -25%;
+  left: 40%;
+  top: -27%;
 }
 
 .note2 {
@@ -32,8 +32,8 @@
 }
 
 .note3 {
-  right: 25%;
-  top: -25%;
+  right: 40%;
+  top: -27%;
 }
 
 .note-text {
@@ -48,8 +48,8 @@
 }
 
 .text1 {
-  top: -24%;
-  left: 5%;
+  top: -25%;
+  left: 18%;
 }
 
 .text2 {
@@ -58,8 +58,12 @@
 }
 
 .text3 {
-  top: -24%;
-  right: 5%;
+  top: -25%;
+  right: 20%;
+}
+
+.photo-container {
+  overflow-x: clip;
 }
 
 .photo-block1, .photo-block2, .photo-block3 {
@@ -70,7 +74,7 @@
   z-index: 2;
 
   .note-text {
-  opacity: 1;
+    opacity: 1;
   }
 
   .note1 {
@@ -123,7 +127,6 @@
 
 .photo6 {
   height: 215px;
-  //left: 15px;
 }
 
 .photo7 {
@@ -131,11 +134,11 @@
 }
 
 .photo8, .photo10 {
-  width: 70%;
+  width: 70% !important;
 }
 
 .photo11, .photo12, .photo13, .photo5, .photo4 {
-  width: 64%;
+  width: 64% !important;
 }
 
 .photo13 {
@@ -146,13 +149,16 @@
   .photo5, .photo13 {
     margin: 0 !important;
   }
+  .photo-container {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .photo5, .photo13 {
     margin: 0 !important;
   }
-  .photo5, .photo4,.photo12, .photo13 {
+  .photo5, .photo4, .photo12, .photo13 {
     width: 100% !important;
   }
   .photo10 {
@@ -171,7 +177,7 @@
     width: 70% !important;
   }
   .photo8, .photo11, .photo12, .photo13, .photo5, .photo4 {
-    width: 68% !important;
+    width: 72% !important;
   }
 }
 

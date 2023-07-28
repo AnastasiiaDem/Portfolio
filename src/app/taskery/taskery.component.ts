@@ -1,6 +1,6 @@
-import {Component, ElementRef, HostListener, Renderer2, ViewChild} from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
-import {animate} from '@angular/animations';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'taskery',
@@ -23,13 +23,13 @@ export class TaskeryComponent {
     this.degrees = scrollPercent * 360;
   }
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private location: Location) {
+    this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
-  navigateTo(page: string) {
-    this.router.navigate(['/' + page]);
-    window.scrollTo(0, 1150);
-    // document.querySelector('#project')?.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+  back() {
+    this.location.back();
   }
 
   scrollToTop() {

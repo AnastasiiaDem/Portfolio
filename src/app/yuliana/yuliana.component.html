@@ -1,6 +1,6 @@
 <div class="header-block">
   <div class="main-block">
-    <nav class="navbar" (click)="navigateTo('')">
+    <nav class="navbar" (click)="back()">
       <p>
         <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
@@ -15,7 +15,7 @@
 
 <div class="theme-toggle">
   <label class="switch ml-4">
-    <input type="checkbox" (click)="setTheme()" [checked]="true">
+    <input type="checkbox" (click)="setTheme()" [checked]="!darkMode">
     <span class="slider"></span>
   </label>
 </div>
@@ -33,7 +33,7 @@
 </div>
 
 <div>
-  <div class="d-flex justify-content-between align-items-center project-block">
+  <div class="d-flex justify-content-between align-items-center project-container">
     <p class="project-title">Yuliana Dementyeva Portfolio</p>
     <div class="btn-group">
       <a href="https://github.com/AnastasiiaDem/YulianaDementyeva" target="_blank">
@@ -73,7 +73,7 @@
     <p>SCSS</p>
   </div>
   <div class="position-relative">
-    <div class="d-flex justify-content-center y-margin">
+    <div class="d-flex justify-content-center align-items-center y-margin">
       <img src="assets/images/yuliana_first.png" alt="First" class="photo-stack photo2">
     </div>
     <div class="d-flex justify-content-around align-items-center x-margin y-margin">
@@ -88,7 +88,7 @@
         <source src="./assets/images/yuliana_book.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="d-flex justify-content-center y-margin">
+    <div class="d-flex justify-content-center align-items-center y-margin">
       <img src="assets/images/cendre.png" alt="First" class="photo-stack">
     </div>
     <div class="d-flex justify-content-around align-items-center x-margin y-margin">
@@ -101,19 +101,19 @@
         </p>
       </div>
     </div>
-    <div class="d-flex justify-content-center y-margin">
+    <div class="d-flex justify-content-center align-items-center y-margin">
       <img src="assets/images/yuliana_second.png" alt="Second" class="photo-stack">
     </div>
-    <div class="d-flex justify-content-center x-margin">
+    <div class="d-flex justify-content-center align-items-center x-margin">
       <video autoplay muted loop playsinline playsInLine class="photo-stack">
         <source src="./assets/images/yuliana_video.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="d-flex justify-content-center y-margin">
+    <div class="d-flex justify-content-center align-items-center y-margin">
       <img src="assets/images/yuliana_third.png" alt="Second" class="photo-stack">
     </div>
-    <div class="d-flex justify-content-center y-margin">
-      <img src="assets/images/yuliana_iphone.png" alt="" style="width: calc(100vw - 30%)">
+    <div class="d-flex justify-content-center align-items-center y-margin">
+      <img src="assets/images/yuliana_iphone.png" alt="" class="photo-stack">
     </div>
     <p class="outro">
       Developing a portfolio website for a Ukrainian supermodel was an extremely rewarding experience. It

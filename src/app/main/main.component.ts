@@ -35,6 +35,7 @@ export class MainComponent {
   }
 
   constructor(private router: Router) {
+    this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
   translate(v: number) {

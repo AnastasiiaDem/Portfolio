@@ -30,6 +30,10 @@ export class YulianaComponent {
   constructor(private router: Router,
               private renderer: Renderer2,
               private location: Location) {
+
+    setTimeout(() => {
+
+    }, 2000);
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 

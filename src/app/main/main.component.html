@@ -93,17 +93,45 @@
       </div>
     </div>
   </div>
-  <div id="about" class="about p-5">
-    <div class="d-flex about-line pt-5">
-      <ng-container *ngFor="let _ of [].constructor(30);">
+  <div id="about" class="about">
+    <!--    <div class="slide-track">-->
+    <!--      <div class="d-flex about-line pt-5">-->
+    <!--        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    <div class="slide-track">-->
+    <!--      <div class="d-flex about-line">-->
+    <!--        <p class="about-heading">Bachelor's degree in Computer Science</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+    <div class="sliding-block">
+      <div class="slide-track">
         <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
-      </ng-container>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
+       </div>
     </div>
-    <div class="d-flex about-line">
-      <ng-container *ngFor="let _ of [].constructor(30)">
-        <p class="about-heading">Bachelor's degree in Computer Science</p>
-      </ng-container>
+    <div class="sliding-block">
+      <div class="slide-track slide-track2">
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        <p class="about-heading about-heading2" style="width: 675px;">Bachelor's degree in Computer Science</p>
+        </div>
     </div>
+
     <p class="text-center pt-4 about-text">
       I develop dynamic and user-friendly web applications and pay special attention to creating visually appealing
       websites.
@@ -128,7 +156,7 @@
       <div class="pb-5">
         <div class="project-block">
           <div class="mac" (click)="navigateTo('taskery')" onclick="">
-            <img src="./assets/images/taskery_ipad.svg" alt="taskery">
+            <img src="./assets/images/taskery_ipad.png" alt="taskery" class="project-img">
             <p class="details" style="color: #000;">view more
               <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png" alt="">
             </p>
@@ -140,7 +168,7 @@
       <div class="pb-5">
         <div class="project-block">
           <div class="mac" (click)="navigateTo('yulianadementyeva')" onclick="">
-            <img src="./assets/images/yuliana_ipad.svg" alt="yulianadementyeva">
+            <img src="./assets/images/yuliana_ipad.png" alt="yulianadementyeva" class="project-img">
             <p class="details" style="color: #fff;">view more
               <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/visible.png" alt="">
             </p>
@@ -174,3 +202,4 @@
     </div>
   </div>
 </div>
+

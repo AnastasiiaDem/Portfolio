@@ -245,15 +245,35 @@ p {
       opacity: 1;
     }
 
-    .about-line {
-      white-space: nowrap;
-      transition: animation 1s ease-in-out;
-      animation: sliding 14s linear infinite;
+
+    .sliding-block {
+     height: 40px;
+      width: 3000px;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+
+      .slide-track {
+        animation: sliding 35s linear infinite;
+        display: flex;
+        width: calc(570px * 9);
+      }
+
+      .slide-track2 {
+        animation: sliding 38s linear infinite !important;
+        width: calc(680px * 9) !important;
+      }
+
+      .about-heading {
+        height: 45px;
+        width: 570px;
+      }
     }
+
 
     .about-text {
       font-size: 18px;
-      padding: 4rem 4rem 5rem 4rem;
+      padding: 4rem 10rem 5rem 10rem;
       color: var(--text-color);
       font-weight: 500;
       line-height: 30px;
@@ -270,7 +290,7 @@ p {
     .about-undertext {
       font-size: 14px;
       font-weight: 400;
-      padding: 0 !important;
+      padding: 0 5rem !important;
       opacity: 0.5;
       line-height: 25px;
     }
@@ -420,12 +440,12 @@ p {
     transform: scale(1.05);
   }
 
-  img {
+  .project-img {
     height: 300px;
   }
 
   .eye-icon {
-    filter: none !important;
+    filter: none;
     height: 20px;
     width: 20px;
   }
@@ -487,7 +507,7 @@ p {
   opacity: 1;
 }
 
-.mac:hover img {
+.mac:hover .project-img {
   filter: blur(2px);
 }
 
@@ -540,11 +560,16 @@ p {
     height: 40px !important;
   }
   .about-heading {
+    height: 31px !important;
     font-size: 20px !important;
+    width: 380px !important;
+  }
+  .about-heading2 {
+    width: 460px !important;
   }
   .about-text {
     font-size: 14px !important;
-    padding: 2rem 1rem !important;
+    padding: 2rem 4rem !important;
     line-height: 25px !important;
 
     .yellow-stroke {
@@ -555,11 +580,13 @@ p {
   .about-undertext {
     font-size: 10px !important;
     line-height: 18px !important;
+    padding: 0 2rem !important;
+
   }
   .project-block {
     padding: 2rem 2rem !important;
   }
-  .mac img {
+  .mac .project-img {
     height: 200px !important;
   }
   .desc-title {
@@ -638,7 +665,7 @@ p {
   .name {
     font-size: 16px !important;
   }
-  .mac img {
+  .mac .project-img {
     height: 250px !important;
   }
   .name {
@@ -663,7 +690,7 @@ p {
 }
 
 @media (min-width: 1440px) {
-  .mac img {
+  .mac .project-img {
     height: 400px !important;
   }
 }

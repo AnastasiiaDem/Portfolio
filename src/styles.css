@@ -20,6 +20,7 @@ body {
   --text-pale-color: rgba(17, 24, 39, 0.50);
   --indicator-color: #f2f2f2;
   --footer-color: rgb(242 242 242 / 80%);
+  --hover-color: #f2f2f2;
 }
 
 [data-theme="dark"] {
@@ -27,6 +28,7 @@ body {
   --text-color: #ffffff;
   --indicator-color: #141414;
   --footer-color: rgb(255 255 255 / 1%);
+  --hover-color: #2c2c2c;
 }
 
 ::-webkit-scrollbar {
@@ -44,6 +46,35 @@ body {
   border-radius: 9999px;
 }
 
+.skeleton {
+  position: relative;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  overflow: hidden;
+  background-color: rgb(104 104 104 / 10%) !important;
+  user-select: none;
+  cursor: default;
+}
+
+.skeleton::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  /*animation: shimmer 2s infinite;*/
+  content: '';
+}
+
 @font-face {
   font-family: 'Thunder';
   src: url('./assets/fonts/Thunder-ExtraBoldLC.otf') format('otf');
@@ -58,12 +89,9 @@ body {
 
 @keyframes sliding {
   0% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }

@@ -25,6 +25,10 @@ export class TaskeryComponent {
 
   constructor(private router: Router,
               private location: Location) {
+
+    setTimeout(() => {
+
+    }, 2000);
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 

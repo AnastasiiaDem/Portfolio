@@ -7,16 +7,20 @@ import {AppRoutingModule} from './app-routing.module';
 import {MainComponent} from './main/main.component';
 import {YulianaComponent} from './yuliana/yuliana.component';
 import {CommonModule} from '@angular/common';
+import {SpinnerComponent} from './spinner/spinner.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskeryComponent,
     MainComponent,
-    YulianaComponent
+    YulianaComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     CommonModule
   ],

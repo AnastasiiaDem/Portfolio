@@ -13,22 +13,17 @@ export class TaskeryComponent {
   darkMode = false;
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event) {
+  onScroll() {
     let scrollTop = window.scrollY;
     let docHeight = document.body.offsetHeight;
     let winHeight = window.innerHeight;
 
     let scrollPercent = scrollTop / (docHeight - winHeight);
-    let scrollPercentRounded = Math.round(scrollPercent * 100);
     this.degrees = scrollPercent * 360;
   }
 
   constructor(private router: Router,
               private location: Location) {
-
-    setTimeout(() => {
-
-    }, 2000);
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 

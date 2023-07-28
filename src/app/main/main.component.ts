@@ -7,14 +7,10 @@ import {Router} from '@angular/router';
   styleUrls: ['./main.component.scss', '../app.component.scss']
 })
 export class MainComponent {
-  // @HostListener('document:mousemove', ['$event'])
-  // onMouseMove(e: any) {
-  //     $("#pointer").css({ left: e.pageX - 120, top: e.pageY - 120 });
-  // }
 
   x: number = 0;
   darkMode = false;
-  time: number;
+  loading = true;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -37,7 +33,16 @@ export class MainComponent {
 
   constructor(private router: Router) {
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
+    setTimeout(() => {
+      this.loading = false;
+      setTimeout(() => {
+        document.querySelectorAll('#spinner').forEach(e => {
+          e.replaceChildren('');
+        });
+      }, 1000);
+    }, 3000);
   }
+
 
   translate(v: number) {
     this.x = v;

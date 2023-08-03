@@ -77,7 +77,6 @@ p {
   .nav-item {
     display: flex;
     width: 112px;
-    height: 44px;
     padding: 12px 24px;
     justify-content: center;
     align-items: center;
@@ -204,7 +203,7 @@ p {
 
   .about {
     position: relative;
-    padding-top: 120px;
+    padding: 10rem 0;
     overflow-x: hidden;
 
     .about-heading {
@@ -267,9 +266,9 @@ p {
 
     .about-text {
       font-size: 18px;
-      padding: 4rem 10rem 5rem 10rem;
+      padding: 0 10rem 5rem 10rem;
       color: var(--text-color);
-      font-weight: 500;
+      font-weight: 600;
       line-height: 30px;
 
       .yellow-stroke {
@@ -285,14 +284,14 @@ p {
       font-size: 14px;
       font-weight: 400;
       padding: 0 5rem !important;
-      opacity: 0.5;
+      opacity: 0.6;
       line-height: 25px;
     }
   }
 
   .project-list {
     position: relative;
-    padding-top: 120px;
+    padding: 10rem 3rem;
 
     .project {
       display: flex;
@@ -540,7 +539,6 @@ p {
   }
   .floating-indicator, .nav-item {
     width: 80px !important;
-    height: 40px !important;
   }
   .about-text {
     font-size: 14px !important;

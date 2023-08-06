@@ -6,9 +6,10 @@ import {TaskeryComponent} from './taskery/taskery.component';
 import {AppRoutingModule} from './app-routing.module';
 import {MainComponent} from './main/main.component';
 import {YulianaComponent} from './yuliana/yuliana.component';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {SpinnerComponent} from './spinner/spinner.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { VidlikComponent } from './vidlik/vidlik.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     TaskeryComponent,
     MainComponent,
     YulianaComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    VidlikComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    NgOptimizedImage
   ],
   providers: [],
   bootstrap: [AppComponent]

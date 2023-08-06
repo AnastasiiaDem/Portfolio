@@ -80,16 +80,16 @@
         <p class="sub-hi">Angular Front-End Developer</p>
       </div>
       <div class="right-container">
-        <video *ngIf="!darkMode" autoplay muted loop playsinline playsInLine class="emoji">
+        <video *ngIf="!darkMode" class="emoji" autoplay muted loop playsinline onclick="this.play()">
           <source src="./assets/images/memoji_modified.mp4" type="video/mp4">
         </video>
-        <video *ngIf="darkMode" autoplay muted loop playsinline playsInLine class="emoji dark-emoji">
+        <video *ngIf="darkMode" class="emoji dark-emoji" autoplay muted loop playsinline onclick="this.play()">
           <source src="./assets/images/dark_memoji_modified.mp4" type="video/mp4">
         </video>
         <div class="location-block d-flex flex-column align-items-center">
           <p class="based">
             <img src="./assets/images/Round%20Pushpin.svg" alt="pushpin">
-            based in <span>&nbsp;Charlotte, NC</span>
+            &nbsp; based in <span>&nbsp;Charlotte, NC</span>
           </p>
           <p class="originally">
             originally from <span>&nbsp;Kyiv, Ukraine&nbsp;</span>
@@ -99,17 +99,6 @@
       </div>
     </div>
     <div id="about" class="about">
-      <!--    <div class="slide-track">-->
-      <!--      <div class="d-flex about-line pt-5">-->
-      <!--        <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>-->
-      <!--      </div>-->
-      <!--    </div>-->
-      <!--    <div class="slide-track">-->
-      <!--      <div class="d-flex about-line">-->
-      <!--        <p class="about-heading">Bachelor's degree in Computer Science</p>-->
-      <!--      </div>-->
-      <!--    </div>-->
-
       <div class="sliding-block">
         <div class="slide-track">
           <p class="about-heading"><span>I am a</span> passionate creator <span>with a</span></p>
@@ -186,6 +175,18 @@
           </div>
           <p class="desc-title pt-3 px-3">Yuliana Dementieva</p>
           <p class="desc-undertext px-3">portfolio for Ukrainian top model</p>
+        </div>
+        <div class="pb-5">
+          <div class="project-block">
+            <div class="mac" (click)="navigateTo('vidlik')" onclick="">
+              <img src="./assets/images/vidlik_ipad.png" alt="vidlik" class="project-img">
+              <p class="details" style="color: #fff;">view more
+                <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/visible.png" alt="">
+              </p>
+            </div>
+          </div>
+          <p class="desc-title pt-3 px-3">VIDLIK</p>
+          <p class="desc-undertext px-3">Time tracking app with a to-do list</p>
         </div>
       </div>
     </div>

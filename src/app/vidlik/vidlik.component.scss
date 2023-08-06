@@ -1,0 +1,23 @@
+.photo-stack {
+  width: calc(100vw - 20%) !important;
+}
+
+.photo4, .photo5 {
+  width: 800px !important;
+}
+
+.photo10 {
+  width: 70% !important;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .photo10 {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .photo10 {
+    width: 70% !important;
+  }
+}

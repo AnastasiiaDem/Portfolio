@@ -43,7 +43,6 @@ export class MainComponent {
     }, 3000);
   }
 
-
   translate(v: number) {
     this.x = v;
     if (v === 0) {

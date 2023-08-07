@@ -1,4 +1,4 @@
-import {Component, HostListener} from '@angular/core';
+import {AfterViewChecked, Component, HostListener} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -34,6 +34,13 @@ export class MainComponent {
   constructor(private router: Router) {
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
     setTimeout(() => {
+      document.querySelectorAll('video').forEach(v => {
+        v.playsInline = true;
+        v.loop = true;
+        v.autoplay = true;
+        v.muted = true;
+        v.play();
+      });
       this.loading = false;
       setTimeout(() => {
         document.querySelectorAll('#spinner').forEach(e => {

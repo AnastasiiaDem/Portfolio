@@ -6,8 +6,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // constructor() {
-  //   document.documentElement.setAttribute('data-theme', 'dark');
-  //   document.documentElement.style.colorScheme = 'dark';
-  // }
+  constructor() {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.style.colorScheme = 'dark';
+  }
 }

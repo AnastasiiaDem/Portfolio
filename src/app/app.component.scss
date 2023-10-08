@@ -271,9 +271,9 @@ input:checked + .slider:before {
   .photo-stack {
     width: 300px !important;
   }
-  .photo1, .photo2, .photo3 {
-    width: 250px !important;
-  }
+  //.photo1, .photo2, .photo3 {
+  //  width: 250px !important;
+  //}
   .btn-group, .x-margin {
     flex-direction: column;
   }
@@ -284,7 +284,7 @@ input:checked + .slider:before {
     font-size: 10px !important;
   }
   .intro, .outro {
-    margin: 3rem 5rem 3rem 5rem !important;
+    margin: 3rem 2rem 3rem 2rem !important;
     font-size: 12px !important;
   }
   .footer {

@@ -283,7 +283,7 @@ p {
     .about-undertext {
       font-size: 14px;
       font-weight: 400;
-      padding: 0 5rem !important;
+      padding: 0 5rem;
       opacity: 0.6;
       line-height: 25px;
     }
@@ -551,10 +551,8 @@ p {
     }
   }
   .about-undertext {
-    font-size: 10px !important;
     line-height: 18px !important;
     padding: 0 2rem !important;
-
   }
   .project-block {
     padding: 2rem 2rem !important;

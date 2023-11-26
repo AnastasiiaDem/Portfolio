@@ -146,6 +146,9 @@
 }
 
 @media (max-width: 480px) {
+  .page-container {
+    overflow: hidden;
+  }
   .photo5 {
     margin: 30px -90px -30px -170px !important;
   }

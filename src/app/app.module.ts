@@ -10,6 +10,7 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {SpinnerComponent} from './spinner/spinner.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { VidlikComponent } from './vidlik/vidlik.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { VidlikComponent } from './vidlik/vidlik.component';
     MainComponent,
     YulianaComponent,
     SpinnerComponent,
-    VidlikComponent
+    VidlikComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

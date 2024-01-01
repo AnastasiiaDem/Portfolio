@@ -1,12 +1,17 @@
-import {AfterViewChecked, Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import Lenis from '@studio-freight/lenis';
+
+const lenis = new Lenis({
+  duration: 3,
+});
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss', '../app.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements OnInit {
 
   x: number = 0;
   darkMode = false;
@@ -50,22 +55,24 @@ export class MainComponent {
     }, 3000);
   }
 
-  translate(v: number) {
-    this.x = v;
-    if (v === 0) {
-      window.scrollTo(0, 0);
+  ngOnInit() {
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
-  }
 
-  navigateTo(page: string) {
-    this.router.navigate(['/' + page]);
-    window.scrollTo(0, 0);
+    requestAnimationFrame(raf);
   }
 
   setTheme() {
     this.darkMode = !this.darkMode;
     document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
     document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate(['/' + page]);
+    window.scrollTo(0, 0);
   }
 
   reveal() {

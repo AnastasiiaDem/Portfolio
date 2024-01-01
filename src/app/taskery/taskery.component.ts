@@ -1,13 +1,17 @@
-import {Component, HostListener} from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Location} from '@angular/common';
+import Lenis from '@studio-freight/lenis';
+
+const lenis = new Lenis({
+  duration: 3,
+});
 
 @Component({
   selector: 'taskery',
   templateUrl: './taskery.component.html',
   styleUrls: ['./taskery.component.scss', '../app.component.scss']
 })
-export class TaskeryComponent {
+export class TaskeryComponent implements OnInit {
 
   degrees = 0;
   darkMode = false;
@@ -22,9 +26,21 @@ export class TaskeryComponent {
     this.degrees = scrollPercent * 360;
   }
 
-  constructor(private router: Router,
-              private location: Location) {
+  constructor(private location: Location) {
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
+  }
+
+  ngOnInit() {
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    setTimeout(() => {
+      lenis.scrollTo('#top');
+    }, 100);
   }
 
   back() {
@@ -32,7 +48,7 @@ export class TaskeryComponent {
   }
 
   scrollToTop() {
-    window.scrollTo(0, 0);
+    lenis.scrollTo('#top');
   }
 
   setTheme() {

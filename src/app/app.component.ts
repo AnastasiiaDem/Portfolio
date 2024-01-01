@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import Lenis from "@studio-freight/lenis";
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,16 @@ export class AppComponent {
   constructor() {
     document.documentElement.setAttribute('data-theme', 'dark');
     document.documentElement.style.colorScheme = 'dark';
+
+    const lenis = new Lenis({
+      duration: 3,
+    });
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
   }
 }

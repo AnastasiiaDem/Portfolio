@@ -2,7 +2,6 @@
   font-family: Inter, sans-serif;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -33,7 +32,6 @@ body {
 
 ::-webkit-scrollbar {
   width: 6px;
-  /*width: 0;*/
   height: 0;
 }
 
@@ -75,6 +73,30 @@ body {
   content: '';
 }
 
+a {
+  cursor: pointer;
+}
+
+html .lenis {
+  height: auto;
+
+  .lenis-smooth {
+    scroll-behavior: auto;
+  }
+
+  .lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
 @font-face {
   font-family: 'Thunder';
   src: url('./assets/fonts/Thunder-ExtraBoldLC.otf') format('otf');
@@ -87,11 +109,11 @@ body {
   }
 }
 
-@keyframes sliding {
+@keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }

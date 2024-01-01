@@ -1,13 +1,17 @@
-import {Component, HostListener, Renderer2} from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Location} from '@angular/common';
+import Lenis from '@studio-freight/lenis';
+
+const lenis = new Lenis({
+  duration: 3,
+});
 
 @Component({
   selector: 'yuliana',
   templateUrl: './yuliana.component.html',
   styleUrls: ['./yuliana.component.scss', '../app.component.scss']
 })
-export class YulianaComponent {
+export class YulianaComponent implements OnInit {
 
   degrees = 0;
   darkMode = false;
@@ -22,14 +26,25 @@ export class YulianaComponent {
     this.degrees = scrollPercent * 360;
   }
 
-  constructor(private router: Router,
-              private renderer: Renderer2,
-              private location: Location) {
+  constructor(private location: Location) {
     this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
+  ngOnInit() {
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    setTimeout(() => {
+      lenis.scrollTo('#top');
+    }, 100);
+  }
+
   scrollToTop() {
-    window.scrollTo(0, 0);
+    lenis.scrollTo('#top');
   }
 
   setTheme() {

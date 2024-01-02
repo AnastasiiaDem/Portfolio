@@ -1,9 +1,9 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 import Lenis from '@studio-freight/lenis';
 
 const lenis = new Lenis({
-  duration: 3,
+  duration: 5,
 });
 
 @Component({
@@ -14,8 +14,8 @@ const lenis = new Lenis({
 export class HeaderComponent implements OnInit {
 
   @Output() theme: EventEmitter<any> = new EventEmitter();
+  @Input() x: number;
 
-  x: number = 0;
   darkMode = false;
 
   constructor(private router: Router) {

@@ -11,6 +11,8 @@ import {SpinnerComponent} from './spinner/spinner.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { VidlikComponent } from './vidlik/vidlik.component';
 import { HeaderComponent } from './header/header.component';
+import { ProjectComponent } from './project/project.component';
+import {QiqiComponent} from './qiqi/qiqi.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HeaderComponent } from './header/header.component';
     YulianaComponent,
     SpinnerComponent,
     VidlikComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProjectComponent,
+    QiqiComponent
   ],
   imports: [
     BrowserModule,

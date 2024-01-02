@@ -1,0 +1,22 @@
+<div class="pet-container">
+  <div class="desc-container">
+    <div class="desc">
+      <div>
+        <h1 class="desc-title">{{ title }}</h1>
+        <p class="desc-undertext">{{ undertext }}</p>
+        <p class="desc-main">{{ description }}</p>
+        <div class="tech">
+          <p *ngFor="let item of techList; let idx = index">
+            {{ item }}
+          </p>
+        </div>
+      </div>
+      <div class="see-more" (click)="navigateTo(nav)">
+        see more<span style="margin-left: 16px;">&#8594;</span>
+      </div>
+    </div>
+  </div>
+  <img [src]="'./assets/images/' + src"
+       [alt]="title"
+       class="pet-img"/>
+</div>

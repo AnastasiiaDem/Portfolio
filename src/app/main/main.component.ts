@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 import Lenis from '@studio-freight/lenis';
 
 const lenis = new Lenis({
-  duration: 3,
+  duration: 5,
 });
 
 @Component({
@@ -72,7 +72,6 @@ export class MainComponent implements OnInit {
 
   navigateTo(page: string) {
     this.router.navigate(['/' + page]);
-    window.scrollTo(0, 0);
   }
 
   reveal() {

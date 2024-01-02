@@ -12,7 +12,7 @@ export class AppComponent {
     document.documentElement.style.colorScheme = 'dark';
 
     const lenis = new Lenis({
-      duration: 3,
+      duration: 5,
     });
 
     function raf(time: any) {

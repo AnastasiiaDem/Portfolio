@@ -3,7 +3,7 @@ import {Location} from '@angular/common';
 import Lenis from '@studio-freight/lenis';
 
 const lenis = new Lenis({
-  duration: 3,
+  duration: 5,
 });
 
 @Component({

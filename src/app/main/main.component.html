@@ -1,8 +1,8 @@
-<app-spinner id="spinner" [style.opacity]="loading ? '1' : '0'" style="transition: all 0.5s ease-in-out;">
-</app-spinner>
+<!--<app-spinner id="spinner" [style.opacity]="loading ? '1' : '0'" style="transition: all 0.5s ease-in-out;">-->
+<!--</app-spinner>-->
 
 <ng-container [style.opacity]="!loading ? '1' : '0'" style="transition: all 0.5s ease-in-out;">
-  <app-header (theme)="setTheme()" ></app-header>
+  <app-header (theme)="setTheme()" [x]="x"></app-header>
   <div class="main-block">
     <div class="home">
       <div class="hi-container">
@@ -139,44 +139,34 @@
     </div>
 
     <div id="projects" class="project-list">
-      <div class="project">
-        <div class="pb-5">
-          <div class="project-block">
-            <div class="mac" (click)="navigateTo('taskery')" onclick="">
-              <img src="./assets/images/taskery_ipad.png" alt="taskery" class="project-img">
-              <p class="details" style="color: #000;">view more
-                <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/000000/visible.png" alt="">
-              </p>
-            </div>
-          </div>
-          <p class="desc-title pt-3 px-3">Taskery</p>
-          <p class="desc-undertext px-3">Project management platform</p>
-        </div>
-        <div class="pb-5">
-          <div class="project-block">
-            <div class="mac" (click)="navigateTo('yulianadementyeva')" onclick="">
-              <img src="./assets/images/yuliana_ipad.png" alt="yulianadementyeva" class="project-img">
-              <p class="details" style="color: #fff;">view more
-                <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/visible.png" alt="">
-              </p>
-            </div>
-          </div>
-          <p class="desc-title pt-3 px-3">Yuliana Dementieva</p>
-          <p class="desc-undertext px-3">Portfolio for Ukrainian top model</p>
-        </div>
-        <div class="pb-5" id="vidlik">
-          <div class="project-block">
-            <div class="mac" (click)="navigateTo('vidlik')" onclick="">
-              <img src="./assets/images/vidlik_ipad.png" alt="vidlik" class="project-img">
-              <p class="details" style="color: #fff;">view more
-                <img class="eye-icon" src="https://img.icons8.com/fluency-systems-regular/48/FFFFFF/visible.png" alt="">
-              </p>
-            </div>
-          </div>
-          <p class="desc-title pt-3 px-3">VIDLIK</p>
-          <p class="desc-undertext px-3">Time tracking app with a to-do list</p>
-        </div>
-      </div>
+      <app-project [title]="'VIDLIK'"
+                   [nav]="'vidlik'"
+                   [techList]="['Angular', 'Typescript', 'Node.js', 'MongoDB', 'SCSS']"
+                   [undertext]="'Time tracking app with a to-do list'"
+                   [description]="'This web app is a registration-free productivity tool! Use the Pomodoro technique to stay focused, prevent burnout and improve your work-life balance'"
+                   [src]="'vidlik_mac.png'">
+      </app-project>
+      <app-project [title]="'QiQi'"
+                   [nav]="'qiqi'"
+                   [techList]="['React', 'Javascript', 'SCSS']"
+                   [undertext]="'Professional Haircare Products store'"
+                   [description]="'The QiQi Haircare Store is more than a website; it is a digital space that reflects the excellence of QiQi salon-grade haircare products, emphasizing the unique fusion of nature and science'"
+                   [src]="'qiqi_mac.png'">
+      </app-project>
+      <app-project [title]="'Taskery'"
+                   [nav]="'taskery'"
+                   [techList]="['Angular', 'Typescript', 'Node.js', 'MongoDB', 'SCSS']"
+                   [undertext]="'Project management platform'"
+                   [description]="'This web app is a user-friendly project management tool that allows you to easily plan, execute and monitor tasks and projects in English and Ukrainian'"
+                   [src]="'taskery_mac.png'">
+      </app-project>
+      <app-project [title]="'Yuliana Dementyeva'"
+                   [nav]="'yulianadementyeva'"
+                   [techList]="['Angular', 'Typescript', 'SCSS']"
+                   [undertext]="'Portfolio for Ukrainian top model'"
+                   [description]="'A professional portfolio website for a Ukrainian supermodel that show an outstanding career, engaging personality and unique style of a leading figure in the industry'"
+                   [src]="'yuliana_ipad.png'">
+      </app-project>
     </div>
 
     <div id="contact" class="contact p-5">
@@ -204,6 +194,7 @@
         </div>
       </div>
     </div>
+
   </div>
   <footer class="footer">
     <p>Copyright © 2023 Anastasiia Dementieva. All rights reserved.</p>

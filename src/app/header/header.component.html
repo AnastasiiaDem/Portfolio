@@ -1,5 +1,5 @@
 <header>
-  <div class="header-block p-5">
+  <div class="header-block">
     <p class="name">ANASTASIIA DEMENTIEVA</p>
     <nav class="navbar">
       <a class="floating-indicator w-inline-block"
@@ -19,7 +19,7 @@
     </nav>
     <div class="social">
       <a target="_blank" href="https://drive.google.com/file/d/1OtajgTRQroAU_tjLV_L76L2tdH0seTKv/view?usp=sharing">
-        <span class="tooltip">CV</span>
+        <span class="tooltip" style="right: -20px;">Resume</span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
              class="lucide lucide-paperclip">
@@ -73,7 +73,7 @@
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
         </svg>
       </a>
-      <label class="switch ml-4">
+      <label class="switch">
         <input type="checkbox" (click)="setTheme()" [checked]="!darkMode">
         <span class="slider"></span>
       </label>

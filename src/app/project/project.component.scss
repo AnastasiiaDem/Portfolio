@@ -1,6 +1,6 @@
 .pet-container {
   width: 100%;
-  height: calc(100vh - 130px);
+  height: fit-content;
   padding: 2rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -64,4 +64,49 @@
   height: -webkit-fill-available;
   max-width: calc(60% - 1rem);
   object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .pet-container {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+
+    .desc-container {
+      max-width: 100%;
+    }
+    .pet-img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .pet-container {
+    align-items: flex-end;
+    flex-direction: column;
+
+    .desc-container {
+      max-width: 100%;
+    }
+    .pet-img {
+      max-width: calc(75% - 1rem);
+    }
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pet-container {
+    align-items: flex-end;
+    flex-direction: column;
+
+    .desc-container {
+      max-width: 100%;
+    }
+    .pet-img {
+      max-width: calc(75% - 1rem);
+    }
+  }
 }

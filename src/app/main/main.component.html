@@ -1,30 +1,22 @@
-<app-spinner id="spinner" [style.opacity]="loading ? '1' : '0'" style="transition: all 0.5s ease-in-out;">
-</app-spinner>
+<!--<app-spinner id="spinner" [style.opacity]="loading ? '1' : '0'" style="transition: all 0.5s ease-in-out;">-->
+<!--</app-spinner>-->
 
 <ng-container [style.opacity]="!loading ? '1' : '0'" style="transition: all 0.5s ease-in-out;">
   <app-header (theme)="setTheme()" [x]="x"></app-header>
   <div class="main-block">
     <div class="home">
-      <div class="hi-container">
-        <p class="hi">Hi, I’m Anastasiia</p>
-        <p class="sub-hi">Front-End Developer</p>
-      </div>
-      <div class="right-container">
-        <video *ngIf="!darkMode" class="emoji" id="lightEmoji" autoplay muted="muted" loop playsInline>
-          <source src="./assets/images/memoji_modified.mp4" type="video/mp4">
-        </video>
-        <video *ngIf="darkMode" class="emoji dark-emoji" id="darkEmoji" autoplay muted="muted" loop playsInline>
-          <source src="./assets/images/dark_memoji_modified.mp4" type="video/mp4">
-        </video>
-        <div class="location-block d-flex flex-column align-items-center">
-          <p class="based">
-            <img src="./assets/images/Round%20Pushpin.svg" alt="pushpin">
-            &nbsp;based in <span>&nbsp;Charlotte, NC</span>
-          </p>
-          <p class="originally">
-            originally from <span>&nbsp;Kyiv, Ukraine&nbsp;</span>
-            <img src="./assets/images/Flag%20Ukraine.svg" alt="flag ukraine">
-          </p>
+      <div class="home-block">
+        <div class="msg-container">
+          <img src="./assets/images/msg.png" alt="msg" class="msg">
+          <img src="./assets/images/msg2.png" alt="msg" class="msg mt-[10px]">
+        </div>
+        <div class="home-container">
+          <video *ngIf="!darkMode" class="emoji" id="lightEmoji" autoplay muted="muted" loop playsInline>
+            <source src="./assets/images/memoji_modified.mp4" type="video/mp4">
+          </video>
+          <video *ngIf="darkMode" class="emoji dark-emoji" id="darkEmoji" autoplay muted="muted" loop playsInline>
+            <source src="./assets/images/dark_memoji_modified.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -170,33 +162,28 @@
     </div>
 
     <div id="contact" class="contact p-5">
-      <p class="contact-title mt-2">Get in touch</p>
-      <p class="contact-cv">View my <a
-        href="https://drive.google.com/file/d/1OtajgTRQroAU_tjLV_L76L2tdH0seTKv/view?usp=sharing"
-        target="_blank"><u>CV</u></a></p>
-      <div class="contact-container d-flex justify-content-around align-items-center">
-        <div class="contact-image">
-          <img src="./assets/images/color%20radians.svg" alt="color radians" id="pointer" class="color-block">
-          <img src="./assets/images/f96b99d56c1652f1050f9acd924e18d7-sticker.png" alt="contact-emoji"
-               class="contact-emoji">
+      <div class="contact-block">
+        <div class="elsewhere-link">
+          <a href="https://mail.google.com/mail/u/0/?source=mailto&to=2222dementieva@gmail.com&fs=1&tf=cm"
+             target="_blank" style="margin-bottom: 15px;">2222dementieva@gmail.com</a>
+          <a href="https://drive.google.com/file/d/1OtajgTRQroAU_tjLV_L76L2tdH0seTKv/view?usp=sharing"
+             target="_blank" style="margin-bottom: 15px;">Resume</a>
+          <a href="https://github.com/AnastasiiaDem"
+             target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/anastasiia-dementieva-842a75203"
+             target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/anastasiiadementyeva"
+             target="_blank">Instagram</a>
         </div>
-        <div style="height: max-content;padding-top: 3rem;">
-          <p class="contact-email">
-            <a href="https://mail.google.com/mail/u/0/?source=mailto&to=2222dementieva@gmail.com&fs=1&tf=cm"
-               target="_blank"><u>2222dementieva@gmail.com</u></a>
-          </p>
-          <p class="elsewhere">Find me elsewhere:</p>
-          <div class="elsewhere-link">
-            <a href="https://github.com/AnastasiiaDem" target="_blank"><u>GitHub</u></a>
-            <a href="https://www.linkedin.com/in/anastasiia-dementieva-842a75203" target="_blank"><u>LinkedIn</u></a>
-            <a href="https://www.instagram.com/anastasiiadementyeva" target="_blank"><u>Instagram</u></a>
-          </div>
+        <div class="contact-image">
+          <!--        <img src="./assets/images/color%20radians.svg" alt="color radians" id="pointer" class="color-block">-->
+          <img src="./assets/images/8cbe409456078f7b-sticker.PNG" alt="contact-emoji" class="contact-emoji">
         </div>
       </div>
     </div>
 
   </div>
   <footer class="footer">
-    <p>Copyright © 2023 Anastasiia Dementieva. All rights reserved.</p>
+    <p>Copyright © 2023 Anastasiia Dementieva</p>
   </footer>
 </ng-container>

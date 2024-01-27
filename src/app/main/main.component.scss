@@ -50,19 +50,23 @@ p {
 }
 
 .main-block {
+  overflow-x: hidden;
+
   .msg {
     height: 40px;
   }
 
   .emoji {
     height: 100%;
+    max-width: 100vw;
     object-fit: cover;
     z-index: -2;
+    overflow: hidden;
   }
 
   .dark-emoji {
     //transform: rotate(270deg);
-    background-color: transparent !important;
+    //background-color: transparent !important;
   }
 
   .about {

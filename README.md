@@ -1,31 +1,19 @@
-### <span style="font-size: larger;">Taskery</span>
+### <span style="font-size: larger;">Portfolio</span>
 
 #### Overview:
-Taskery is a comprehensive project management application designed to streamline task organization and enhance productivity. With robust features including user authentication, real-time project tracking, task status updates, and report generation, Taskery empowers teams to efficiently manage their projects.
+My portfolio website showcases my projects, skills, and achievements as a software engineer. It serves as a comprehensive representation of my capabilities and experience in the field.
 
-#### Key Features:
-- User authentication system
-- Real-time project and task status tracking
-- Detailed project descriptions
-- Report generation functionality
-- Calendar viewing with English and Ukrainian localization
+#### Key Sections:
+- Projects: Highlighting my notable projects with detailed descriptions and technologies used.
+- Skills: Enumerating my technical skills and proficiencies.
+- About Me: Brief overview of my background, education, and career objectives.
+- Contact: Offering various means of communication for potential collaborations or inquiries.
 
 #### Technologies Used:
 - Angular
-- TypeScript
-- RxJS
 - SCSS
-- Bootstrap
-- Node.js
-- MongoDB
-- Syncfusion
-- ApexCharts.js
-- Transloco
-- Quill Rich Text Editor
+- Typescript
+- Vercel for hosting
 
-#### How to Run:
-1. Clone the repository: `git clone https://github.com/anastasiiadem/taskery2.git`
-2. Navigate to the project directory: `cd taskery2`
-3. Install dependencies: `npm install`
-4. Start the application: `ng serve`
-5. Access Taskery in your browser at: `http://localhost:4200`
+#### How to Access:
+Visit [anastasiiadementieva.vercel.app](https://anastasiiadementieva.vercel.app/) to explore my portfolio website.

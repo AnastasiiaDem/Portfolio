@@ -1,0 +1,73 @@
+.photo-stack {
+  width: calc(100vw - 20%) !important;
+}
+
+.photo10 {
+  width: 70% !important;
+}
+
+.photo11 {
+  width: 25% !important;
+}
+
+.photo5 {
+  margin: 30px auto -30px -310px;
+}
+
+.photo5, .photo4 {
+  width: 64% !important;
+}
+
+.photo6 {
+  height: 215px;
+  border-radius: 10px;
+}
+
+.photo7 {
+  height: 250px;
+  border-radius: 10px;
+}
+
+.photo12, .photo13 {
+  width: 40% !important;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .photo5 {
+    margin: 30px -90px -30px -170px !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .photo5 {
+    margin: 0 !important;
+  }
+  .photo5, .photo4 {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .photo4 {
+    width: 72% !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .photo10 {
+    width: 100% !important;
+  }
+  .photo11 {
+    width: 30% !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .photo10 {
+    width: 70% !important;
+  }
+  .photo101{
+    width: 30% !important;
+  }
+}

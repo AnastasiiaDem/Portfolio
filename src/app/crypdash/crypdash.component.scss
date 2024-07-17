@@ -29,8 +29,12 @@
 }
 
 .photo12, .photo13 {
-  width: 40% !important;
+  width: 80% !important;
   border-radius: 10px;
+}
+
+.photo14 {
+  object-fit: cover;
 }
 
 @media (max-width: 480px) {
@@ -67,7 +71,7 @@
   .photo10 {
     width: 70% !important;
   }
-  .photo101{
+  .photo11{
     width: 30% !important;
   }
 }

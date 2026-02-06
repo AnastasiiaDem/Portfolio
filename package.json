@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
+    "@emailjs/browser": "^4.4.1",
     "@studio-freight/lenis": "^1.0.33",
     "@vercel/analytics": "^1.1.1",
     "bootstrap": "^5.3.0",

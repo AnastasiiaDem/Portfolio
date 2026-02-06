@@ -1,18 +1,17 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
 import Lenis from '@studio-freight/lenis';
 
 const lenis = new Lenis({
-  duration: 5,
+  duration: 1,
 });
 
 @Component({
   selector: 'app-vidlik',
   templateUrl: './vidlik.component.html',
-  styleUrls: ['./vidlik.component.scss', '../app.component.scss']
+  styleUrls: ['./vidlik.component.scss', '../../app.component.scss'],
 })
 export class VidlikComponent implements OnInit {
-
   degrees = 0;
   darkMode = false;
 
@@ -27,7 +26,8 @@ export class VidlikComponent implements OnInit {
   }
 
   constructor(private location: Location) {
-    this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
+    this.darkMode =
+      document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
   ngOnInit() {
@@ -49,8 +49,13 @@ export class VidlikComponent implements OnInit {
 
   setTheme() {
     this.darkMode = !this.darkMode;
-    document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
-    document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
+    document.documentElement.setAttribute(
+      'data-theme',
+      this.darkMode ? 'dark' : 'light',
+    );
+    document.documentElement.style.colorScheme = this.darkMode
+      ? 'dark'
+      : 'light';
   }
 
   back() {

@@ -1,0 +1,37 @@
+<header>
+  <div class="header-block">
+    <p class="name">ANASTASIIA DEMENTIEVA</p>
+    <nav class="navbar">
+      <a
+        class="floating-indicator w-inline-block"
+        [style.transform]="indicatorTransform()"
+      ></a>
+
+      <a
+        (click)="scrollTo('#top'); translate(0)"
+        class="nav-item"
+        [class.active]="x === 0"
+        >About</a
+      >
+
+      <a
+        (click)="scrollTo('#projects'); translate(1)"
+        class="nav-item"
+        [class.active]="x === 1"
+        >Projects</a
+      >
+
+      <a
+        (click)="scrollTo('#contact'); translate(2)"
+        class="nav-item"
+        [class.active]="x === 2"
+        >Contact</a
+      >
+    </nav>
+
+    <label class="switch">
+      <input type="checkbox" (click)="setTheme()" [checked]="!darkMode" />
+      <span class="slider"></span>
+    </label>
+  </div>
+</header>

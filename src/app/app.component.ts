@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
-import Lenis from "@studio-freight/lenis";
+import { Component } from '@angular/core';
+import Lenis from '@studio-freight/lenis';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   constructor() {
@@ -12,7 +12,7 @@ export class AppComponent {
     document.documentElement.style.colorScheme = 'dark';
 
     const lenis = new Lenis({
-      duration: 5,
+      duration: 1,
     });
 
     function raf(time: any) {

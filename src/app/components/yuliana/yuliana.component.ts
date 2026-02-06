@@ -1,18 +1,17 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
+import { Component, HostListener, OnInit } from '@angular/core';
 import Lenis from '@studio-freight/lenis';
 
 const lenis = new Lenis({
-  duration: 5,
+  duration: 1,
 });
 
 @Component({
-  selector: 'taskery',
-  templateUrl: './taskery.component.html',
-  styleUrls: ['./taskery.component.scss', '../app.component.scss']
+  selector: 'yuliana',
+  templateUrl: './yuliana.component.html',
+  styleUrls: ['./yuliana.component.scss', '../../app.component.scss'],
 })
-export class TaskeryComponent implements OnInit {
-
+export class YulianaComponent implements OnInit {
   degrees = 0;
   darkMode = false;
 
@@ -27,7 +26,8 @@ export class TaskeryComponent implements OnInit {
   }
 
   constructor(private location: Location) {
-    this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
+    this.darkMode =
+      document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
   ngOnInit() {
@@ -43,17 +43,22 @@ export class TaskeryComponent implements OnInit {
     }, 100);
   }
 
-  back() {
-    this.location.back();
-  }
-
   scrollToTop() {
     lenis.scrollTo('#top');
   }
 
   setTheme() {
     this.darkMode = !this.darkMode;
-    document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
-    document.documentElement.style.colorScheme = this.darkMode ? 'dark' : 'light';
+    document.documentElement.setAttribute(
+      'data-theme',
+      this.darkMode ? 'dark' : 'light',
+    );
+    document.documentElement.style.colorScheme = this.darkMode
+      ? 'dark'
+      : 'light';
+  }
+
+  back() {
+    this.location.back();
   }
 }

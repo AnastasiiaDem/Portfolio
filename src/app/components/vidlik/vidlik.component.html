@@ -1,0 +1,262 @@
+<div class="page-container">
+  <div class="back-container">
+    <div class="back" (click)="back()">
+      <p>
+        <svg
+          height="16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
+            fill="rgba(0, 0, 0, 0.2)"
+          ></path>
+        </svg>
+        &nbsp;Back
+      </p>
+    </div>
+  </div>
+
+  <div class="theme-toggle">
+    <label class="switch ml-4">
+      <input type="checkbox" (click)="setTheme()" [checked]="!darkMode" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="scroll-top">
+    <a class="top-scroll" (click)="scrollToTop()">
+      <svg
+        height="20"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
+          fill="rgba(0, 0, 0, 0.2)"
+        ></path>
+      </svg>
+    </a>
+    <div
+      class="bg"
+      [style.background]="
+        'conic-gradient(rgb(136 136 255) ' +
+        degrees +
+        'deg, rgb(204 204 204 / 20%) ' +
+        degrees +
+        'deg)'
+      "
+    ></div>
+  </div>
+
+  <div>
+    <div
+      class="d-flex justify-content-between align-items-center project-container"
+    >
+      <p class="project-title">VIDLIK</p>
+      <div class="btn-group">
+        <a href="https://github.com/AnastasiiaDem/Vidlik" target="_blank">
+          <div class="btn">
+            code
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-github"
+            >
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </div>
+        </a>
+        <a
+          href="https://github.com/AnastasiiaDem/Vidlik-server"
+          target="_blank"
+        >
+          <div class="btn">
+            server
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-server"
+            >
+              <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+              <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+              <line x1="6" x2="6.01" y1="6" y2="6" />
+              <line x1="6" x2="6.01" y1="18" y2="18" />
+            </svg>
+          </div>
+        </a>
+        <a
+          href="https://vidlik.vercel.app/"
+          target="_blank"
+          class="position-relative"
+        >
+          <div class="btn">
+            website
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+            >
+              <path d="M7 7h10v10" />
+              <path d="M7 17 17 7" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+    <p class="intro">
+      Welcome to VIDLIK - your productivity partner to help you make every
+      second count! No registration needed to use the user-friendly interface
+      and benefit from Pomodoro's techniques. Stay focused and avoid burnout
+      effortlessly by breaking work into intervals and short breaks. Use the
+      Pomodoro technique by breaking up your work into focused intervals and
+      short breaks to stay on track and maintain a balanced work-life balance.
+      <br />
+      However, to make the experience more personalized, sign up to unlock the
+      full potential of our app by creating your own to-do lists with editable
+      working hours, number of rounds, and break lengths and start speeding up
+      your workflow.
+    </p>
+    <div class="tech">
+      <p>Angular</p>
+      <p>Typescript</p>
+      <p>SCSS</p>
+      <p>Node.js</p>
+      <p>MongoDB</p>
+    </div>
+    <div class="position-relative y-margin">
+      <div class="d-flex justify-content-center align-items-center x-margin">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          playsInLine
+          class="photo-stack"
+          onload="this.play()"
+        >
+          <source src="./assets/images/vidlik_greeting.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div
+        class="d-flex justify-content-center align-items-center x-margin y-margin"
+      >
+        <img
+          src="assets/images/vidlik_main(light).png"
+          alt="Main"
+          class="photo-stack"
+        />
+      </div>
+
+      <div class="text-block" style="width: 80%">
+        <p>
+          To keep track of your own task list, you need to register in the app.
+          Users can sign in in a simple way or choose
+          <span>Google Authentication</span>.
+        </p>
+      </div>
+      <div
+        class="d-flex justify-content-center align-items-center x-margin stack-block"
+      >
+        <img
+          src="assets/images/vidlik_signup.png"
+          alt="Register"
+          class="photo-stack photo4"
+        />
+        <img
+          src="assets/images/vidlik_login.png"
+          alt="Login"
+          class="photo-stack photo5"
+        />
+      </div>
+      <div
+        class="d-flex flex-column justify-content-between align-items-center x-margin y-margin"
+      >
+        <img src="assets/images/vidlik_new.png" alt="New" class="photo-stack" />
+        <div class="text-block">
+          <p>
+            After registration, all users can create and edit a
+            <span>personalized to-do list</span>. Where users can change the
+            status of the task.
+          </p>
+        </div>
+        <img
+          src="assets/images/vidlik_edit.png"
+          alt="Edit"
+          class="photo-stack"
+        />
+      </div>
+      <div
+        class="d-flex justify-content-around align-items-center x-margin y-margin"
+      >
+        <div class="text-block">
+          <p>
+            If the task is in progress, it is
+            <span>highlighted in green</span> and minutes on the timer are
+            changed.
+          </p>
+        </div>
+        <img
+          src="assets/images/vidlik_home.png"
+          alt="Home"
+          class="photo-stack photo10"
+        />
+      </div>
+
+      <p class="outro">
+        VIDLIK was developed to simplify the path to productivity! Work smarter,
+        stay focused, and make every second count with the Pomodoro methodology.
+        <br />
+        Get things done, increase productivity, and create a better work-life
+        balance. Have fun at work!
+        <br />
+        <svg
+          style="height: 22px; margin-top: 2rem; fill: var(--text-color)"
+          viewBox="0 0 130 130"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <circle cx="65" cy="65" r="65" fill="#141414" />
+          <rect x="15" y="15" width="100" height="100" fill="url(#pattern0)" />
+          <defs>
+            <pattern
+              id="pattern0"
+              patternContentUnits="objectBoundingBox"
+              width="1"
+              height="1"
+            >
+              <use xlink:href="#image0_53_6" transform="scale(0.01)" />
+            </pattern>
+            <image
+              id="image0_53_6"
+              width="100"
+              height="100"
+              xlink:href="data:image/png;base64,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"
+            />
+          </defs>
+        </svg>
+      </p>
+    </div>
+  </div>
+</div>

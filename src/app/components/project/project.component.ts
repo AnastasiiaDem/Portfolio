@@ -4,10 +4,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss', '../app.component.scss']
+  styleUrls: ['./project.component.scss', '../../app.component.scss'],
 })
 export class ProjectComponent {
-
   @Input() title: string;
   @Input() undertext: string;
   @Input() description: string;
@@ -18,7 +17,8 @@ export class ProjectComponent {
   darkMode = false;
 
   constructor(private router: Router) {
-    this.darkMode = document.documentElement.getAttribute('data-theme') == 'dark';
+    this.darkMode =
+      document.documentElement.getAttribute('data-theme') == 'dark';
   }
 
   navigateTo(page: string) {

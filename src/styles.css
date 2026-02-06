@@ -4,7 +4,17 @@
   padding: 0;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+html {
+  font-size: 16px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -16,7 +26,7 @@ body {
 :root {
   --bg-color: #fff;
   --text-color: #212529;
-  --text-pale-color: rgba(17, 24, 39, 0.50);
+  --text-pale-color: rgba(156, 163, 175, 0.25);
   --indicator-color: #f2f2f2;
   --footer-color: rgb(242 242 242 / 80%);
   --hover-color: #f2f2f2;
@@ -28,6 +38,34 @@ body {
   --indicator-color: #141414;
   --footer-color: rgb(255 255 255 / 1%);
   --hover-color: #2c2c2c;
+
+  .contact-form-wrapper {
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --input-bg: rgba(0, 0, 0, 0.2);
+    --input-border: rgba(255, 255, 255, 0.1);
+    --input-border-hover: rgba(255, 255, 255, 0.2);
+    --focus-ring: rgba(255, 255, 255, 0.05);
+    --btn-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    --spinner-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+[data-theme="light"] {
+  .contact-form-wrapper {
+    --card-bg: rgba(0, 0, 0, 0.02);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --input-bg: #fff;
+    --input-border: rgba(0, 0, 0, 0.1);
+    --input-border-hover: rgba(0, 0, 0, 0.25);
+    --focus-ring: rgba(0, 0, 0, 0.05);
+    --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --spinner-color: rgba(255, 255, 255, 0.3);
+    --success-bg: rgba(16, 185, 129, 0.1);
+    --success-color: #047857;
+    --error-bg: rgba(239, 68, 68, 0.1);
+    --error-color: #b91c1c;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -70,7 +108,7 @@ body {
     rgba(255, 255, 255, 0)
   );
   /*animation: shimmer 2s infinite;*/
-  content: '';
+  content: "";
 }
 
 a {
@@ -98,8 +136,8 @@ html .lenis {
 }
 
 @font-face {
-  font-family: 'Thunder';
-  src: url('./assets/fonts/Thunder-ExtraBoldLC.otf') format('otf');
+  font-family: "Thunder";
+  src: url("./assets/fonts/Thunder-ExtraBoldLC.otf") format("otf");
 }
 
 @keyframes pulse {

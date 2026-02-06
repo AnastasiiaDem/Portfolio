@@ -9,8 +9,7 @@
 .note {
   position: absolute;
   width: 1px;
-  filter: blur(0.3px);
-  height: 70px;
+  height: 40px;
   background: #838383;
   border-radius: 3px;
   transform-origin: 0 100%;
@@ -20,20 +19,19 @@
   z-index: 2;
 }
 
-.note1 {
-  left: 40%;
-  top: -27%;
+.note1,
+.note2,
+.note3 {
+  left: 45%;
+  top: -23%;
 }
 
 .note2 {
   left: 50%;
-  top: -15%;
-  height: 25px;
 }
 
 .note3 {
-  right: 40%;
-  top: -27%;
+  left: 60%;
 }
 
 .note-text {
@@ -53,7 +51,7 @@
 }
 
 .text2 {
-  top: -20%;
+  top: -28%;
   left: 50%;
 }
 
@@ -64,9 +62,12 @@
 
 .photo-container {
   overflow-x: clip;
+  padding-top: 2rem;
 }
 
-.photo-block1, .photo-block2, .photo-block3 {
+.photo-block1,
+.photo-block2,
+.photo-block3 {
   position: relative;
 }
 
@@ -133,11 +134,16 @@
   height: 250px;
 }
 
-.photo8, .photo10 {
+.photo8,
+.photo10 {
   width: 70% !important;
 }
 
-.photo11, .photo12, .photo13, .photo5, .photo4 {
+.photo11,
+.photo12,
+.photo13,
+.photo5,
+.photo4 {
   width: 64% !important;
 }
 
@@ -148,6 +154,7 @@
 @media (max-width: 480px) {
   .page-container {
     overflow: hidden;
+    flex-direction: column;
   }
   .photo5 {
     margin: 30px -90px -30px -170px !important;
@@ -155,38 +162,45 @@
   .photo13 {
     margin: 0 !important;
   }
-  .photo-container {
-    flex-direction: column;
-  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-  .photo5, .photo13 {
+  .photo5,
+  .photo13 {
     margin: 0 !important;
   }
-  .photo5, .photo4, .photo12, .photo13 {
+  .photo5,
+  .photo4,
+  .photo12,
+  .photo13 {
     width: 100% !important;
   }
   .photo10 {
     width: 100% !important;
   }
-  .photo8, .photo11 {
+  .photo8,
+  .photo11 {
     width: 80% !important;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .photo-block2, .photo-block3 {
+  .photo-block2,
+  .photo-block3 {
     margin-left: -150px;
   }
   .photo10 {
     width: 70% !important;
   }
-  .photo8, .photo11, .photo12, .photo13, .photo5, .photo4 {
+  .photo8,
+  .photo11,
+  .photo12,
+  .photo13,
+  .photo5,
+  .photo4 {
     width: 72% !important;
   }
 }
 
 @media (min-width: 1440px) {
-
 }

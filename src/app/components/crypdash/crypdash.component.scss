@@ -14,7 +14,8 @@
   margin: 30px auto -30px -310px;
 }
 
-.photo5, .photo4 {
+.photo5,
+.photo4 {
   width: 64% !important;
 }
 
@@ -28,7 +29,8 @@
   border-radius: 10px;
 }
 
-.photo12, .photo13 {
+.photo12,
+.photo13 {
   width: 80% !important;
   border-radius: 10px;
 }
@@ -41,13 +43,20 @@
   .photo5 {
     margin: 30px -90px -30px -170px !important;
   }
+  .photo10 {
+    width: 100% !important;
+  }
+  .photo11 {
+    width: 80% !important;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .photo5 {
     margin: 0 !important;
   }
-  .photo5, .photo4 {
+  .photo5,
+  .photo4 {
     width: 100% !important;
   }
 }
@@ -63,7 +72,7 @@
     width: 100% !important;
   }
   .photo11 {
-    width: 30% !important;
+    width: 40% !important;
   }
 }
 
@@ -71,7 +80,7 @@
   .photo10 {
     width: 70% !important;
   }
-  .photo11{
+  .photo11 {
     width: 30% !important;
   }
 }

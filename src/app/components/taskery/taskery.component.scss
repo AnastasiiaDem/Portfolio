@@ -9,7 +9,7 @@
 .note {
   position: absolute;
   width: 1px;
-  height: 40px;
+  height: 15px;
   background: #838383;
   border-radius: 3px;
   transform-origin: 0 100%;
@@ -23,7 +23,7 @@
 .note2,
 .note3 {
   left: 45%;
-  top: -23%;
+  top: -16%;
 }
 
 .note2 {
@@ -46,18 +46,18 @@
 }
 
 .text1 {
-  top: -25%;
-  left: 18%;
+  top: -18%;
+  left: 22%;
 }
 
 .text2 {
-  top: -28%;
+  top: -22%;
   left: 50%;
 }
 
 .text3 {
-  top: -25%;
-  right: 20%;
+  top: -17%;
+  right: 22%;
 }
 
 .photo-container {
@@ -122,16 +122,27 @@
   }
 }
 
+// Base image styles
+.photo-stack {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .photo5 {
   margin: 30px auto -30px -310px;
 }
 
 .photo6 {
   height: 215px;
+  width: auto;
+  max-width: 100%;
 }
 
 .photo7 {
   height: 250px;
+  width: auto;
+  max-width: 100%;
 }
 
 .photo8,
@@ -151,56 +162,168 @@
   margin: 30px auto -30px -310px;
 }
 
+// Mobile (up to 480px)
 @media (max-width: 480px) {
   .page-container {
     overflow: hidden;
+  }
+
+  .photo-container {
     flex-direction: column;
+    align-items: center;
   }
+
+  .photo-block1,
+  .photo-block2,
+  .photo-block3 {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .photo1,
+  .photo2,
+  .photo3 {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
   .photo5 {
-    margin: 30px -90px -30px -170px !important;
+    margin: 1rem auto !important;
+    width: 90% !important;
   }
+
   .photo13 {
-    margin: 0 !important;
+    margin: 1rem auto !important;
+    width: 90% !important;
+  }
+
+  .photo4,
+  .photo8,
+  .photo10,
+  .photo11,
+  .photo12 {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+
+  .photo6,
+  .photo7 {
+    width: 40%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .stack-block {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
+// Tablet (481px to 768px)
 @media (min-width: 481px) and (max-width: 768px) {
-  .photo5,
-  .photo13 {
-    margin: 0 !important;
+  .photo-container {
+    gap: 1.5rem;
   }
-  .photo5,
+
+  .photo-block1,
+  .photo-block2,
+  .photo-block3 {
+    margin: 0;
+  }
+
+  .photo1,
+  .photo2,
+  .photo3 {
+    width: 100%;
+  }
+
+  .photo5 {
+    margin: 2rem auto !important;
+    width: 85% !important;
+  }
+
+  .photo13 {
+    margin: 2rem auto !important;
+    width: 85% !important;
+  }
+
   .photo4,
-  .photo12,
-  .photo13 {
-    width: 100% !important;
+  .photo12 {
+    width: 85% !important;
+    margin: 0 auto;
   }
+
   .photo10 {
-    width: 100% !important;
+    width: 85% !important;
   }
+
   .photo8,
   .photo11 {
     width: 80% !important;
   }
+
+  .photo-wrap {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .photo6,
+  .photo7 {
+    width: 30%;
+    height: auto;
+  }
 }
 
+// Small desktop (769px to 1024px)
 @media (min-width: 769px) and (max-width: 1024px) {
-  .photo-block2,
+  .photo-block2 {
+    margin-left: -80px;
+  }
+
+  .photo-block3 {
+    margin-left: -80px;
+  }
+
+  .photo10 {
+    width: 75% !important;
+  }
+
+  .photo5,
+  .photo13 {
+    margin: 30px auto -30px -200px;
+  }
+
+  .photo8,
+  .photo11 {
+    width: 75% !important;
+  }
+}
+
+// Large desktop (1025px to 1439px)
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .photo-block2 {
+    margin-left: -120px;
+  }
+
+  .photo-block3 {
+    margin-left: -120px;
+  }
+
+  .photo5,
+  .photo13 {
+    margin: 30px auto -30px -250px;
+  }
+}
+
+// Extra large desktop (1440px+)
+@media (min-width: 1440px) {
+  .photo-block2 {
+    margin-left: -150px;
+  }
+
   .photo-block3 {
     margin-left: -150px;
   }
-  .photo10 {
-    width: 70% !important;
-  }
-  .photo8,
-  .photo11,
-  .photo12,
-  .photo13,
-  .photo5,
-  .photo4 {
-    width: 72% !important;
-  }
-}
-
-@media (min-width: 1440px) {
 }
